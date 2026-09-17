@@ -71,6 +71,14 @@ POKAZATELJI = [
              "filtri": {"geo": "HR", "nace_r2": "B-D", "indic_bt": "PRD",
                         "s_adj": "SCA", "unit": "I21"}},
         ],
+        # Sluzbeno objavljena godisnja stopa. Racuna se iz kalendarski
+        # prilagodenog niza, pa se ne poklapa u decimalu sa stopom koju bismo
+        # sami izveli iz sezonski prilagodenog indeksa. Za objavu vrijedi ova.
+        "izvori_stope": [
+            {"api": "eurostat", "oznaka": "Eurostat", "tablica": "sts_inpr_m",
+             "filtri": {"geo": "HR", "nace_r2": "B-D", "indic_bt": "PRD",
+                        "s_adj": "CA", "unit": "PCH_SM"}},
+        ],
     },
     {
         "id": "maloprodaja",
@@ -82,6 +90,11 @@ POKAZATELJI = [
             {"api": "eurostat", "oznaka": "Eurostat", "tablica": "sts_trtu_m",
              "filtri": {"geo": "HR", "nace_r2": "G47", "indic_bt": "VOL_SLS",
                         "s_adj": "SCA", "unit": "I21"}},
+        ],
+        "izvori_stope": [
+            {"api": "eurostat", "oznaka": "Eurostat", "tablica": "sts_trtu_m",
+             "filtri": {"geo": "HR", "nace_r2": "G47", "indic_bt": "VOL_SLS",
+                        "s_adj": "CA", "unit": "PCH_SM"}},
         ],
     },
     {
@@ -95,13 +108,18 @@ POKAZATELJI = [
              "filtri": {"geo": "HR", "nace_r2": "F", "indic_bt": "PRD",
                         "s_adj": "SCA", "unit": "I21"}},
         ],
+        "izvori_stope": [
+            {"api": "eurostat", "oznaka": "Eurostat", "tablica": "sts_copr_m",
+             "filtri": {"geo": "HR", "nace_r2": "F", "indic_bt": "PRD",
+                        "s_adj": "CA", "unit": "PCH_SM"}},
+        ],
     },
     {
         "id": "izvoz",
         "naziv": "Izvoz robe",
         "podnaslov": "Ukupan izvoz, milijuni eura, sezonski prilagodeno",
         "jedinica": "mio_eur",
-        "prikaz": "god_stopa",
+        "prikaz": "razina",
         "izvori": [
             {"api": "eurostat", "oznaka": "Eurostat", "tablica": "ei_eteu27_2020_m",
              "filtri": {"geo": "HR", "stk_flow": "EXP", "partner": "WORLD",
@@ -113,7 +131,7 @@ POKAZATELJI = [
         "naziv": "Uvoz robe",
         "podnaslov": "Ukupan uvoz, milijuni eura, sezonski prilagodeno",
         "jedinica": "mio_eur",
-        "prikaz": "god_stopa",
+        "prikaz": "razina",
         "izvori": [
             {"api": "eurostat", "oznaka": "Eurostat", "tablica": "ei_eteu27_2020_m",
              "filtri": {"geo": "HR", "stk_flow": "IMP", "partner": "WORLD",
@@ -316,25 +334,40 @@ def skini_iz_izvora(izvor):
     return ecb_serija(izvor["skup"], izvor["kljuc"])
 
 
-def obradi(pokazatelj):
-    """Skine jedan pokazatelj i vrati gotov rjecnik spreman za spremanje."""
-    tocke = None
-    upotrijebljeni = None
+def prvi_koji_radi(izvori):
+    """Proba izvore redom i vrati prvi koji uspije, uz popis onih koji nisu."""
     greske = []
-
-    for izvor in pokazatelj["izvori"]:
+    for izvor in izvori:
         try:
-            tocke = skini_iz_izvora(izvor)
-            upotrijebljeni = izvor
-            break
+            return skini_iz_izvora(izvor), izvor, greske
         except Exception as greska:          # noqa: BLE001
             opis = izvor.get("tablica") or izvor.get("kljuc")
             greske.append("{}: {}".format(opis, greska))
+    return None, None, greske
 
+
+def obradi(pokazatelj):
+    """Skine jedan pokazatelj i vrati gotov rjecnik spreman za spremanje."""
+    tocke, upotrijebljeni, greske = prvi_koji_radi(pokazatelj["izvori"])
     if tocke is None:
         raise ValueError(" | ".join(greske))
 
-    stope = godisnje_stope(tocke) if pokazatelj["jedinica"] != "posto" else []
+    # Godisnja stopa promjene.
+    # Ako pokazatelj ima "izvori_stope", uzimamo sluzbeno objavljenu stopu -
+    # ona je ono sto Eurostat i DZS navode u priopcenjima, i ona ide u tekst.
+    # Sami je racunamo samo ako sluzbene nema.
+    podrijetlo_stope = "izracunato"
+    stope = []
+    if pokazatelj.get("izvori_stope"):
+        sluzbene, izvor_stope, greske_stope = prvi_koji_radi(pokazatelj["izvori_stope"])
+        if sluzbene:
+            stope = sluzbene
+            podrijetlo_stope = "sluzbeno: " + (izvor_stope.get("tablica") or izvor_stope.get("kljuc"))
+        else:
+            greske.extend(greske_stope)
+
+    if not stope and pokazatelj["jedinica"] != "posto":
+        stope = godisnje_stope(tocke)
 
     if pokazatelj["prikaz"] == "god_stopa" and stope:
         glavna_serija = stope
@@ -359,6 +392,7 @@ def obradi(pokazatelj):
         "god_stope": [{"t": t, "v": v} for t, v in stope],
         "_dijagnostika": {
             "upotrijebljeni_izvor": upotrijebljeni.get("tablica") or upotrijebljeni.get("kljuc"),
+            "podrijetlo_stope": podrijetlo_stope,
             "neuspjeli_izvori": greske,
         },
     }
@@ -388,6 +422,7 @@ def main():
                 "zadnje_razdoblje": rezultat["zadnje_razdoblje"],
                 "kasni_mjeseci": kasni,
                 "izvor": rezultat["_dijagnostika"]["upotrijebljeni_izvor"],
+                "stopa": rezultat["_dijagnostika"]["podrijetlo_stope"],
             }
             if rezultat["_dijagnostika"]["neuspjeli_izvori"]:
                 stavka["preskoceni_izvori"] = rezultat["_dijagnostika"]["neuspjeli_izvori"]
