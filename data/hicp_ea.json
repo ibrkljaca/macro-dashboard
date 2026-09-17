@@ -573,6 +573,7 @@
  "god_stope": [],
  "_dijagnostika": {
   "upotrijebljeni_izvor": "prc_hicp_minr",
+  "podrijetlo_stope": "izracunato",
   "neuspjeli_izvori": []
  }
 }

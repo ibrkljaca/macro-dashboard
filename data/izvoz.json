@@ -4,10 +4,10 @@
  "podnaslov": "Ukupan izvoz, milijuni eura, sezonski prilagodeno",
  "izvor": "Eurostat",
  "jedinica": "mio_eur",
- "prikaz": "god_stopa",
+ "prikaz": "razina",
  "zadnje_razdoblje": "2026-07",
- "zadnja_vrijednost": 2.92,
- "promjena": -4.27,
+ "zadnja_vrijednost": 2065.1,
+ "promjena": -186.3,
  "razine": [
   {
    "t": "2015-01",
@@ -1078,6 +1078,7 @@
  ],
  "_dijagnostika": {
   "upotrijebljeni_izvor": "ei_eteu27_2020_m",
+  "podrijetlo_stope": "izracunato",
   "neuspjeli_izvori": []
  }
 }

@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-09-17T18:56:33+00:00",
+ "azurirano": "2026-09-17T20:04:28+00:00",
  "uspjelo": 10,
  "zastarjelo": 0,
  "palo": 0,
@@ -9,70 +9,80 @@
    "status": "ok",
    "zadnje_razdoblje": "2026-07",
    "kasni_mjeseci": 2,
-   "izvor": "sts_inpr_m"
+   "izvor": "sts_inpr_m",
+   "stopa": "sluzbeno: sts_inpr_m"
   },
   {
    "id": "maloprodaja",
    "status": "ok",
    "zadnje_razdoblje": "2026-07",
    "kasni_mjeseci": 2,
-   "izvor": "sts_trtu_m"
+   "izvor": "sts_trtu_m",
+   "stopa": "sluzbeno: sts_trtu_m"
   },
   {
    "id": "gradjevinarstvo",
    "status": "ok",
    "zadnje_razdoblje": "2026-06",
    "kasni_mjeseci": 3,
-   "izvor": "sts_copr_m"
+   "izvor": "sts_copr_m",
+   "stopa": "sluzbeno: sts_copr_m"
   },
   {
    "id": "izvoz",
    "status": "ok",
    "zadnje_razdoblje": "2026-07",
    "kasni_mjeseci": 2,
-   "izvor": "ei_eteu27_2020_m"
+   "izvor": "ei_eteu27_2020_m",
+   "stopa": "izracunato"
   },
   {
    "id": "uvoz",
    "status": "ok",
    "zadnje_razdoblje": "2026-07",
    "kasni_mjeseci": 2,
-   "izvor": "ei_eteu27_2020_m"
+   "izvor": "ei_eteu27_2020_m",
+   "stopa": "izracunato"
   },
   {
    "id": "hicp_hr",
    "status": "ok",
    "zadnje_razdoblje": "2026-08",
    "kasni_mjeseci": 1,
-   "izvor": "prc_hicp_minr"
+   "izvor": "prc_hicp_minr",
+   "stopa": "izracunato"
   },
   {
    "id": "hicp_temeljna",
    "status": "ok",
    "zadnje_razdoblje": "2026-08",
    "kasni_mjeseci": 1,
-   "izvor": "prc_hicp_minr"
+   "izvor": "prc_hicp_minr",
+   "stopa": "izracunato"
   },
   {
    "id": "hicp_ea",
    "status": "ok",
    "zadnje_razdoblje": "2026-08",
    "kasni_mjeseci": 1,
-   "izvor": "prc_hicp_minr"
+   "izvor": "prc_hicp_minr",
+   "stopa": "izracunato"
   },
   {
    "id": "esi",
    "status": "ok",
    "zadnje_razdoblje": "2026-08",
    "kasni_mjeseci": 1,
-   "izvor": "ei_bssi_m_r2"
+   "izvor": "ei_bssi_m_r2",
+   "stopa": "izracunato"
   },
   {
    "id": "stambeni_krediti",
    "status": "ok",
    "zadnje_razdoblje": "2026-07",
    "kasni_mjeseci": 2,
-   "izvor": "M.HR.B.A2C.A.R.A.2250.EUR.N"
+   "izvor": "M.HR.B.A2C.A.R.A.2250.EUR.N",
+   "stopa": "izracunato"
   }
  ]
 }
