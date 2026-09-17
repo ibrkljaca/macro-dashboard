@@ -1,0 +1,57 @@
+{
+ "azurirano": "2026-09-17T18:40:20+00:00",
+ "uspjelo": 10,
+ "palo": 0,
+ "pokazatelji": [
+  {
+   "id": "ind_proizvodnja",
+   "status": "ok",
+   "zadnje_razdoblje": "2026-07"
+  },
+  {
+   "id": "maloprodaja",
+   "status": "ok",
+   "zadnje_razdoblje": "2026-07"
+  },
+  {
+   "id": "gradjevinarstvo",
+   "status": "ok",
+   "zadnje_razdoblje": "2026-06"
+  },
+  {
+   "id": "izvoz",
+   "status": "ok",
+   "zadnje_razdoblje": "2026-07"
+  },
+  {
+   "id": "uvoz",
+   "status": "ok",
+   "zadnje_razdoblje": "2026-07"
+  },
+  {
+   "id": "hicp_hr",
+   "status": "ok",
+   "zadnje_razdoblje": "2025-12"
+  },
+  {
+   "id": "hicp_temeljna",
+   "status": "ok",
+   "zadnje_razdoblje": "2025-12"
+  },
+  {
+   "id": "hicp_ea",
+   "status": "ok",
+   "zadnje_razdoblje": "2025-12"
+  },
+  {
+   "id": "esi",
+   "status": "ok",
+   "zadnje_razdoblje": "2026-08"
+  },
+  {
+   "id": "stambeni_krediti",
+   "status": "ok",
+   "zadnje_razdoblje": "2026-07"
+  }
+ ]
+}
