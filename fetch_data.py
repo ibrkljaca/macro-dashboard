@@ -126,15 +126,17 @@ POKAZATELJI = [
         "podnaslov": "Godisnja stopa promjene cijena",
         "jedinica": "posto",
         "prikaz": "razina",
-        # Eurostat je 2026. ugasio tablicu prc_hicp_manr, pa je ECB sada prvi
-        # izbor. ECB objavljuje isti HICP koji mu Eurostat salje.
+        # POVIJEST OVOG POKAZATELJA - vrijedi procitati prije diranja:
+        # Pocetkom 2026. HICP je presao na novu klasifikaciju (ECOICOP ver. 2).
+        # Stara tablica prc_hicp_manr i stare ECB sifre serija (npr. 000000)
+        # nisu nestale - samo su se zamrznule na prosincu 2025. i dalje uredno
+        # odgovaraju na upite. Zato ih ovdje NE drzimo kao rezervu: izvor koji
+        # vraca lanjske podatke bez ijedne greske gori je od izvora koji padne.
+        # Nova tablica je prc_hicp_minr, dimenzija se zove coicop18,
+        # a ukupni indeks je TOTAL (ne vise CP00).
         "izvori": [
-            {"api": "ecb", "oznaka": "ECB (HICP)", "skup": "ICP",
-             "kljuc": "M.HR.N.000000.4.ANR"},
             {"api": "eurostat", "oznaka": "Eurostat (HICP)", "tablica": "prc_hicp_minr",
-             "filtri": {"geo": "HR", "coicop": "TOTAL", "unit": "RCH_A"}},
-            {"api": "eurostat", "oznaka": "Eurostat (HICP)", "tablica": "prc_hicp_minr",
-             "filtri": {"geo": "HR", "coicop": "CP00", "unit": "RCH_A"}},
+             "filtri": {"geo": "HR", "coicop18": "TOTAL", "unit": "RCH_A"}},
         ],
     },
     {
@@ -143,13 +145,10 @@ POKAZATELJI = [
         "podnaslov": "HICP bez energije, hrane, alkohola i duhana",
         "jedinica": "posto",
         "prikaz": "razina",
+        # TOT_X_NRG_FOOD = "Overall index excluding energy, food, alcohol and tobacco"
         "izvori": [
-            {"api": "ecb", "oznaka": "ECB (HICP)", "skup": "ICP",
-             "kljuc": "M.HR.N.XEF000.4.ANR"},
             {"api": "eurostat", "oznaka": "Eurostat (HICP)", "tablica": "prc_hicp_minr",
-             "filtri": {"geo": "HR", "coicop": "TOT_X_NRG_FOOD", "unit": "RCH_A"}},
-            {"api": "eurostat", "oznaka": "Eurostat (HICP)", "tablica": "prc_hicp_minr",
-             "filtri": {"geo": "HR", "coicop": "TOT_X_NRG_FOOD_NP", "unit": "RCH_A"}},
+             "filtri": {"geo": "HR", "coicop18": "TOT_X_NRG_FOOD", "unit": "RCH_A"}},
         ],
     },
     {
@@ -159,10 +158,8 @@ POKAZATELJI = [
         "jedinica": "posto",
         "prikaz": "razina",
         "izvori": [
-            {"api": "ecb", "oznaka": "ECB (HICP)", "skup": "ICP",
-             "kljuc": "M.U2.N.000000.4.ANR"},
             {"api": "eurostat", "oznaka": "Eurostat (HICP)", "tablica": "prc_hicp_minr",
-             "filtri": {"geo": "EA20", "coicop": "TOTAL", "unit": "RCH_A"}},
+             "filtri": {"geo": "EA20", "coicop18": "TOTAL", "unit": "RCH_A"}},
         ],
     },
     {
