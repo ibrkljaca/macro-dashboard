@@ -1,0 +1,36 @@
+name: Azuriraj podatke
+
+on:
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  azuriraj:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Preuzmi projekt
+        uses: actions/checkout@v4
+
+      - name: Pripremi Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Skini podatke s Eurostata i ECB-a
+        run: python fetch_data.py
+
+      - name: Spremi promjene
+        run: |
+          git config user.name "macro-dashboard-robot"
+          git config user.email "actions@github.com"
+          git add data
+          if git diff --staged --quiet; then
+            echo "Nema novih podataka - nista za spremiti."
+          else
+            git commit -m "Automatsko azuriranje podataka ($(date -u +%Y-%m-%d))"
+            git push
+          fi
