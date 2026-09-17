@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hrvatska: makroekonomski pregled</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pozadina:#EFECE7;
+    --kartica:#F7F5F2;
+    --rub:#DCDAD6;
+    --tinta:#1A1814;
+    --tinta-tiha:#6E6A63;
+    --plava:#16609C;
+    --crvena:#B01030;
+    --rast:#1E6B3A;
+    --pad:#A32219;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:24px 16px 48px;
+    background:var(--pozadina);
+    color:var(--tinta);
+    font-family:Roboto,'Helvetica Neue',Arial,sans-serif;
+    font-size:14px; line-height:1.45;
+  }
+  .omot{max-width:1180px; margin:0 auto;}
+
+  h1{
+    font-family:Lato,Roboto,sans-serif; font-weight:700;
+    font-size:24px; color:#000; text-align:center;
+    margin:0 0 4px;
+  }
+  .podnaslov-stranice{
+    text-align:center; font-size:13px; color:var(--tinta-tiha);
+    margin:0 0 20px;
+  }
+
+  .alatna{
+    display:flex; justify-content:center; gap:6px;
+    margin:0 0 22px; flex-wrap:wrap;
+  }
+  .alatna button{
+    font-family:inherit; font-size:13px; font-weight:500;
+    padding:6px 16px; border:1px solid var(--rub);
+    background:transparent; color:var(--tinta-tiha);
+    border-radius:999px; cursor:pointer;
+  }
+  .alatna button:hover{border-color:var(--plava); color:var(--plava);}
+  .alatna button[aria-pressed="true"]{
+    background:var(--plava); border-color:var(--plava); color:#fff;
+  }
+
+  .mreza{
+    display:grid; gap:16px;
+    grid-template-columns:repeat(3,1fr);
+  }
+  @media (max-width:980px){.mreza{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:660px){.mreza{grid-template-columns:1fr;}}
+
+  .kartica{
+    background:var(--kartica); border:1px solid var(--rub);
+    border-radius:6px; padding:14px 16px 10px;
+    display:flex; flex-direction:column;
+    align-self:start;   /* otvorena tablica ne rasteze susjedne kartice */
+  }
+  .zaglavlje{
+    display:flex; justify-content:space-between; align-items:flex-start; gap:10px;
+    min-height:66px;      /* isti header svuda -> grafikoni poravnati u retku */
+  }
+  .naslov{font-size:15px; font-weight:700; margin:0;}
+  .opis{font-size:12px; color:var(--tinta-tiha); margin:2px 0 0; max-width:230px;}
+  .brojka{font-size:22px; font-weight:700; text-align:right; white-space:nowrap; line-height:1.2;}
+  .promjena{font-size:12px; text-align:right; white-space:nowrap; margin-top:1px;}
+  .promjena.gore{color:var(--rast);}
+  .promjena.dolje{color:var(--pad);}
+  .promjena.ravno{color:var(--tinta-tiha);}
+
+  .legenda{display:flex; gap:14px; font-size:12px; color:var(--tinta-tiha);
+           margin:8px 0 0; min-height:17px;}
+  .legenda span{display:inline-flex; align-items:center; gap:5px;}
+  .kljuc{width:14px; height:3px; border-radius:2px; display:inline-block;}
+
+  .platno{position:relative; margin-top:8px;}
+  svg{display:block; width:100%; height:auto; overflow:visible;}
+  .mreza-linija{stroke:var(--rub); stroke-width:1;}
+  .nula{stroke:#B9B5AE; stroke-width:1.2;}
+  .os-tekst{fill:var(--tinta-tiha); font-size:12px; font-family:Roboto,sans-serif;}
+  .trag{fill:none; stroke-width:2; stroke-linejoin:round; stroke-linecap:round;}
+  .kriz{stroke:#9A958D; stroke-width:1; stroke-dasharray:3 3;}
+
+  .oblacic{
+    position:absolute; pointer-events:none; opacity:0;
+    background:#fff; border:1px solid var(--rub); border-radius:4px;
+    padding:6px 9px; font-size:12px; white-space:nowrap;
+    box-shadow:0 2px 6px rgba(0,0,0,.09); transition:opacity .08s;
+    z-index:5;
+  }
+  .oblacic b{font-weight:700;}
+  .oblacic .red{display:flex; align-items:center; gap:6px;}
+
+  .podnozje-kartice{
+    display:flex; justify-content:space-between; align-items:center;
+    margin-top:8px; font-size:12px; color:var(--tinta-tiha);
+  }
+  details.tablica{margin-top:6px;}
+  details.tablica summary{
+    font-size:12px; color:var(--tinta-tiha); cursor:pointer; list-style:none;
+  }
+  details.tablica summary::-webkit-details-marker{display:none;}
+  details.tablica summary:hover{color:var(--plava);}
+  .tablica-okvir{max-height:210px; overflow-y:auto; margin-top:6px;}
+  details.tablica table{
+    width:100%; border-collapse:collapse; font-size:12px;
+  }
+  details.tablica thead th{
+    position:sticky; top:0; background:var(--kartica);
+  }
+  details.tablica th, details.tablica td{
+    text-align:right; padding:3px 4px; border-bottom:1px solid var(--rub);
+  }
+  details.tablica th:first-child, details.tablica td:first-child{text-align:left;}
+
+  .upozorenje{
+    background:#FBF0D8; border:1px solid #E3C77E; color:#6B4E12;
+    border-radius:4px; padding:8px 12px; font-size:12px; margin-bottom:14px;
+  }
+  .podnozje{
+    text-align:center; font-size:12px; color:var(--tinta-tiha);
+    margin-top:26px; line-height:1.7;
+  }
+  .ucitavanje{text-align:center; color:var(--tinta-tiha); padding:60px 0;}
+</style>
+</head>
+<body>
+<div class="omot">
+  <h1>Hrvatska: makroekonomski pregled</h1>
+  <p class="podnaslov-stranice">Devet pokazatelja, ažurirano svaki dan iz Eurostata i ECB-a</p>
+
+  <div class="alatna" id="alatna" role="group" aria-label="Razdoblje prikaza">
+    <button data-mjeseci="12">1G</button>
+    <button data-mjeseci="36">3G</button>
+    <button data-mjeseci="60">5G</button>
+    <button data-mjeseci="0" aria-pressed="true">Max</button>
+  </div>
+
+  <div id="upozorenja"></div>
+  <div class="mreza" id="mreza"><p class="ucitavanje">Učitavanje podataka…</p></div>
+
+  <p class="podnozje" id="podnozje"></p>
+</div>
+
+<script>
+// ===========================================================================
+// POSTAVKE KARTICA
+// ---------------------------------------------------------------------------
+// Svaka kartica je jedan blok. "polje" bira koju seriju iz datoteke crtamo:
+//   "razine"    - vrijednost kakva je objavljena (indeks, postotak, mio EUR)
+//   "god_stope" - godisnja stopa promjene koju je skripta izracunala
+// ===========================================================================
+
+const PLAVA  = '#16609C';
+const CRVENA = '#B01030';
+
+const KARTICE = [
+  { naslov:'Industrijska proizvodnja', opis:'Godišnja stopa promjene obujma',
+    jedinica:'%', decimala:1,
+    serije:[{datoteka:'ind_proizvodnja', polje:'god_stope', naziv:'Industrijska proizvodnja', boja:PLAVA}] },
+
+  { naslov:'Trgovina na malo', opis:'Godišnja stopa promjene obujma prodaje',
+    jedinica:'%', decimala:1,
+    serije:[{datoteka:'maloprodaja', polje:'god_stope', naziv:'Trgovina na malo', boja:PLAVA}] },
+
+  { naslov:'Građevinarstvo', opis:'Godišnja stopa promjene obujma radova',
+    jedinica:'%', decimala:1,
+    serije:[{datoteka:'gradjevinarstvo', polje:'god_stope', naziv:'Građevinarstvo', boja:PLAVA}] },
+
+  { naslov:'Robna razmjena', opis:'Mjesečne vrijednosti, sezonski prilagođeno',
+    jedinica:'mil. €', decimala:0,
+    serije:[{datoteka:'izvoz', polje:'razine', naziv:'Izvoz', boja:PLAVA},
+            {datoteka:'uvoz',  polje:'razine', naziv:'Uvoz',  boja:CRVENA}] },
+
+  { naslov:'Inflacija (HICP)', opis:'Godišnja stopa promjene cijena',
+    jedinica:'%', decimala:1,
+    serije:[{datoteka:'hicp_hr', polje:'razine', naziv:'Hrvatska', boja:PLAVA}] },
+
+  { naslov:'Temeljna inflacija', opis:'Bez energije, hrane, alkohola i duhana',
+    jedinica:'%', decimala:1,
+    serije:[{datoteka:'hicp_temeljna', polje:'razine', naziv:'Temeljna', boja:PLAVA}] },
+
+  { naslov:'Inflacija: HR i europodručje', opis:'Godišnja stopa promjene cijena',
+    jedinica:'%', decimala:1,
+    serije:[{datoteka:'hicp_hr', polje:'razine', naziv:'Hrvatska',     boja:PLAVA},
+            {datoteka:'hicp_ea', polje:'razine', naziv:'Europodručje', boja:CRVENA}] },
+
+  { naslov:'Ekonomski sentiment', opis:'Kompozitni indeks, dugoročni prosjek = 100',
+    jedinica:'', decimala:1,
+    serije:[{datoteka:'esi', polje:'razine', naziv:'ESI', boja:PLAVA}] },
+
+  { naslov:'Kamate na stambene kredite', opis:'Nove kredite kućanstvima, prosjek',
+    jedinica:'%', decimala:2,
+    serije:[{datoteka:'stambeni_krediti', polje:'razine', naziv:'Kamatna stopa', boja:PLAVA}] },
+];
+
+// ===========================================================================
+// POMOCNE FUNKCIJE
+// ===========================================================================
+
+const MJESECI = ['siječnja','veljače','ožujka','travnja','svibnja','lipnja',
+                 'srpnja','kolovoza','rujna','listopada','studenoga','prosinca'];
+
+function broj(v, decimala){
+  if (v === null || v === undefined || isNaN(v)) return '–';
+  return v.toLocaleString('hr-HR', {minimumFractionDigits:decimala,
+                                    maximumFractionDigits:decimala});
+}
+
+function sMjerom(v, jedinica, decimala){
+  const t = broj(v, decimala);
+  if (!jedinica) return t;
+  return jedinica === '%' ? t + ' %' : t + ' ' + jedinica;
+}
+
+function razdobljeTekst(t){           // "2026-08" -> "kolovoz 2026."
+  const [g,m] = t.split('-');
+  const ime = MJESECI[parseInt(m,10)-1];
+  const veliko = ime.charAt(0).toUpperCase() + ime.slice(1);
+  // nominativ za prikaz u oblacicu
+  const nom = {'Siječnja':'siječanj','Veljače':'veljača','Ožujka':'ožujak',
+               'Travnja':'travanj','Svibnja':'svibanj','Lipnja':'lipanj',
+               'Srpnja':'srpanj','Kolovoza':'kolovoz','Rujna':'rujan',
+               'Listopada':'listopad','Studenoga':'studeni','Prosinca':'prosinac'}[veliko];
+  return nom + ' ' + g + '.';
+}
+
+function lijepKorak(sirovi){
+  // Najblizi "okrugli" korak: 1, 2, 2.5 ili 5 puta potencija desetke.
+  if (!(sirovi > 0)) return 1;
+  const magnituda = Math.pow(10, Math.floor(Math.log10(sirovi)));
+  const omjer = sirovi / magnituda;
+  const izbor = omjer <= 1 ? 1 : omjer <= 2 ? 2 : omjer <= 2.5 ? 2.5 : omjer <= 5 ? 5 : 10;
+  return izbor * magnituda;
+}
+
+async function ucitajJSON(putanja){
+  const o = await fetch(putanja + '?v=' + Date.now());
+  if (!o.ok) throw new Error(putanja + ' nije dostupan');
+  return o.json();
+}
+
+// ===========================================================================
+// CRTANJE
+// ===========================================================================
+
+const S = {w:420, h:150, lijevo:46, desno:8, gore:10, dolje:22};
+const SKALE = [];   // geometrija svake kartice, da je pokazivač mišem može koristiti
+
+function nacrtaj(kartica, podaci, mjeseci, idx){
+  // 1. Priprema serija, skraćenih na traženo razdoblje
+  const serije = kartica.serije.map(s => {
+    let tocke = podaci[s.datoteka][s.polje];
+    if (mjeseci > 0 && tocke.length > mjeseci) tocke = tocke.slice(-mjeseci);
+    return {...s, tocke};
+  });
+
+  const svaRazdoblja = [...new Set(serije.flatMap(s => s.tocke.map(t => t.t)))].sort();
+  const sveVrijednosti = serije.flatMap(s => s.tocke.map(t => t.v));
+  if (!sveVrijednosti.length) return '<p class="ucitavanje">Nema podataka</p>';
+
+  // 2. Raspon y-osi: uvijek uključi nulu kad serija ide u minus
+  let min = Math.min(...sveVrijednosti), max = Math.max(...sveVrijednosti);
+  const stvarniMin = min, stvarniMax = max;
+  if (min > 0 && kartica.jedinica === '%') min = 0;
+  if (min === max) { min -= 1; max += 1; }
+  const zrak = (max - min) * 0.12;
+  min -= zrak; max += zrak;
+
+  // Zaokruzi granice na "lijepe" vrijednosti (1, 2, 5, 10, 20, 50...),
+  // da oznake na y-osi budu 0, 5, 10 umjesto 2,8 / 11,6 / 20,5.
+  const korakOsi = lijepKorak((max - min) / 4);
+  min = Math.floor(min / korakOsi) * korakOsi;
+  max = Math.ceil(max / korakOsi) * korakOsi;
+
+  // Serija koja nikad ne ide u minus ne treba os ispod nule
+  // (kamatna stopa od 2,9 % ne prikazuje se na osi koja pocinje na −2).
+  if (stvarniMin >= 0) min = Math.max(0, min);
+  if (stvarniMax <= 0) max = Math.min(0, max);
+
+  const indeksPo = Object.fromEntries(svaRazdoblja.map((t,i) => [t,i]));
+  const n = svaRazdoblja.length;
+  const px = i => S.lijevo + (n <= 1 ? 0 : i * (S.w - S.lijevo - S.desno) / (n - 1));
+  const py = v => S.gore + (max - v) / (max - min) * (S.h - S.gore - S.dolje);
+
+  SKALE[idx] = {px, py, razdoblja:svaRazdoblja, indeksPo};
+
+  // 3. Vodoravne crte i oznake y-osi
+  const decOsi = korakOsi >= 1 ? (korakOsi % 1 === 0 ? 0 : 1) : (korakOsi >= 0.1 ? 1 : 2);
+  let mrezaSVG = '';
+  for (let v = min; v <= max + korakOsi/2; v += korakOsi){
+    const vr = Math.abs(v) < korakOsi/1e6 ? 0 : v;   // ukloni -0 i sitne ostatke
+    const y = py(vr);
+    const nula = vr === 0;
+    mrezaSVG += `<line class="${nula?'nula':'mreza-linija'}" x1="${S.lijevo}" y1="${y}" x2="${S.w-S.desno}" y2="${y}"/>`;
+    mrezaSVG += `<text class="os-tekst" x="${S.lijevo-6}" y="${y+4}" text-anchor="end">${broj(vr, decOsi)}</text>`;
+  }
+
+  // 4. Oznake godina na x-osi
+  let osSVG = '';
+  const godine = [...new Set(svaRazdoblja.map(t => t.slice(0,4)))];
+  const korakGodina = Math.max(1, Math.ceil(godine.length / 5));
+  godine.forEach((g,i) => {
+    if (i % korakGodina !== 0) return;
+    const prvi = svaRazdoblja.findIndex(t => t.startsWith(g));
+    if (prvi < 0) return;
+    osSVG += `<text class="os-tekst" x="${px(prvi)}" y="${S.h-6}" text-anchor="middle">${g}.</text>`;
+  });
+
+  // 5. Linije (i blaga ispuna kad je serija jedna)
+  let tragoviSVG = '';
+  serije.forEach(s => {
+    const d = s.tocke.map((t,i) => (i ? 'L' : 'M') + px(indeksPo[t.t]) + ' ' + py(t.v)).join(' ');
+    if (serije.length === 1){
+      const dno = py(Math.max(min, Math.min(0, max)));
+      const prvi = px(indeksPo[s.tocke[0].t]);
+      const zadnji = px(indeksPo[s.tocke[s.tocke.length-1].t]);
+      tragoviSVG += `<path d="${d} L${zadnji} ${dno} L${prvi} ${dno} Z" fill="${s.boja}" opacity="0.08"/>`;
+    }
+    tragoviSVG += `<path class="trag" d="${d}" stroke="${s.boja}"/>`;
+  });
+
+  // 6. Sloj za pokazivač mišem
+  const sidra = svaRazdoblja.map((t,i) =>
+    `<circle class="sidro" data-i="${i}" cx="${px(i)}" cy="0" r="0"/>`).join('');
+
+  return `
+    <svg viewBox="0 0 ${S.w} ${S.h}" role="img"
+         aria-label="${kartica.naslov} — kretanje kroz vrijeme">
+      ${mrezaSVG}${osSVG}${tragoviSVG}
+      <line class="kriz" x1="0" y1="${S.gore}" x2="0" y2="${S.h-S.dolje}" style="opacity:0"/>
+      <g class="tocke-sloj"></g>
+      ${sidra}
+      <rect class="hvatac" x="${S.lijevo}" y="${S.gore}"
+            width="${S.w-S.lijevo-S.desno}" height="${S.h-S.gore-S.dolje}"
+            fill="transparent" style="cursor:crosshair"/>
+    </svg>`;
+}
+
+// ===========================================================================
+// SASTAVLJANJE KARTICE
+// ===========================================================================
+
+function slozi(kartica, podaci, mjeseci, idx){
+  const glavna = podaci[kartica.serije[0].datoteka];
+  const jeStopa = kartica.serije[0].polje === 'god_stope';
+  const zadnja = jeStopa
+      ? glavna.god_stope[glavna.god_stope.length-1]
+      : glavna.razine[glavna.razine.length-1];
+
+  // promjena u odnosu na prethodni mjesec
+  const niz = jeStopa ? glavna.god_stope : glavna.razine;
+  const prije = niz.length > 1 ? niz[niz.length-2].v : null;
+  const delta = prije === null ? null : zadnja.v - prije;
+
+  let razred = 'ravno', strelica = '', tekstDelta = '–';
+  if (delta !== null){
+    razred = delta > 0.0001 ? 'gore' : (delta < -0.0001 ? 'dolje' : 'ravno');
+    strelica = delta > 0.0001 ? '▲' : (delta < -0.0001 ? '▼' : '■');
+    // promjena postotne stope mjeri se u postotnim bodovima, ne u postocima
+    const mjera = kartica.jedinica === '%' ? ' p.b.' : (kartica.jedinica ? ' ' + kartica.jedinica : '');
+    tekstDelta = strelica + ' ' + broj(Math.abs(delta), kartica.decimala) + mjera;
+  }
+
+  const izvori = [...new Set(kartica.serije.map(s => podaci[s.datoteka].izvor))].join(', ');
+
+  // Legenda se ispisuje samo kad ima vise serija, ali prazan redak ostaje
+  // uvijek - tako su grafikoni u istom retku poravnati na istoj visini.
+  const legenda = `<div class="legenda">${kartica.serije.length > 1
+      ? kartica.serije.map(s =>
+          `<span><i class="kljuc" style="background:${s.boja}"></i>${s.naziv}</span>`).join('')
+      : ''}</div>`;
+
+  // tablica zadnjih 24 mjeseca, radi provjere i kopiranja
+  const stupci = kartica.serije;
+  const razdoblja = [...new Set(stupci.flatMap(s =>
+      podaci[s.datoteka][s.polje].map(t => t.t)))].sort().slice(-24).reverse();
+  const mape = stupci.map(s => Object.fromEntries(
+      podaci[s.datoteka][s.polje].map(t => [t.t, t.v])));
+  const redovi = razdoblja.map(t =>
+      `<tr><td>${t}</td>${mape.map(m =>
+        `<td>${m[t] === undefined ? '–' : broj(m[t], kartica.decimala)}</td>`).join('')}</tr>`).join('');
+
+  return `
+    <section class="kartica">
+      <div class="zaglavlje">
+        <div>
+          <h2 class="naslov">${kartica.naslov}</h2>
+          <p class="opis">${kartica.opis}</p>
+        </div>
+        <div>
+          <div class="brojka">${sMjerom(zadnja.v, kartica.jedinica, kartica.decimala)}</div>
+          <div class="promjena ${razred}">${tekstDelta}</div>
+        </div>
+      </div>
+      ${legenda}
+      <div class="platno">
+        ${nacrtaj(kartica, podaci, mjeseci, idx)}
+        <div class="oblacic"></div>
+      </div>
+      <div class="podnozje-kartice">
+        <span>${razdobljeTekst(zadnja.t)}</span>
+        <span>Izvor: ${izvori} &nbsp;|&nbsp; Obrada: I. Brkljača</span>
+      </div>
+      <details class="tablica">
+        <summary>Prikaži brojke (zadnja 24 mjeseca)</summary>
+        <div class="tablica-okvir">
+          <table>
+            <thead><tr><th>Razdoblje</th>${stupci.map(s => `<th>${s.naziv}</th>`).join('')}</tr></thead>
+            <tbody>${redovi}</tbody>
+          </table>
+        </div>
+      </details>
+    </section>`;
+}
+
+// ===========================================================================
+// POKAZIVAC MISEM
+// ===========================================================================
+
+function ozivi(element, kartica, podaci, mjeseci, idx){
+  const svg = element.querySelector('svg');
+  const oblacic = element.querySelector('.oblacic');
+  const kriz = svg.querySelector('.kriz');
+  const sloj = svg.querySelector('.tocke-sloj');
+  const sidra = [...svg.querySelectorAll('.sidro')];
+  if (!sidra.length) return;
+
+  const serije = kartica.serije.map(s => {
+    let t = podaci[s.datoteka][s.polje];
+    if (mjeseci > 0 && t.length > mjeseci) t = t.slice(-mjeseci);
+    return {...s, mapa:Object.fromEntries(t.map(x => [x.t, x.v]))};
+  });
+  const razdoblja = [...new Set(kartica.serije.flatMap(s => {
+    let t = podaci[s.datoteka][s.polje];
+    if (mjeseci > 0 && t.length > mjeseci) t = t.slice(-mjeseci);
+    return t.map(x => x.t);
+  }))].sort();
+
+  const hvatac = svg.querySelector('.hvatac');
+
+  function pokazi(dogadjaj){
+    const okvir = svg.getBoundingClientRect();
+    const omjer = S.w / okvir.width;
+    const x = (dogadjaj.clientX - okvir.left) * omjer;
+
+    let najblizi = 0, razlika = Infinity;
+    sidra.forEach(s => {
+      const d = Math.abs(parseFloat(s.getAttribute('cx')) - x);
+      if (d < razlika){ razlika = d; najblizi = parseInt(s.dataset.i,10); }
+    });
+
+    const t = razdoblja[najblizi];
+    const cx = parseFloat(sidra[najblizi].getAttribute('cx'));
+
+    kriz.setAttribute('x1', cx); kriz.setAttribute('x2', cx);
+    kriz.style.opacity = 1;
+
+    // točke na linijama, na mjestu gdje križić siječe svaku seriju
+    const skala = SKALE[idx];
+    sloj.innerHTML = serije
+      .filter(s => s.mapa[t] !== undefined)
+      .map(s => `<circle cx="${cx}" cy="${skala.py(s.mapa[t])}" r="3.5"
+                         fill="${s.boja}" stroke="#F7F5F2" stroke-width="2"/>`)
+      .join('');
+
+    const redovi = serije.map(s => {
+      const v = s.mapa[t];
+      if (v === undefined) return '';
+      const ime = kartica.serije.length > 1 ? s.naziv + ': ' : '';
+      return `<div class="red"><i class="kljuc" style="background:${s.boja}"></i>
+              ${ime}<b>${sMjerom(v, kartica.jedinica, kartica.decimala)}</b></div>`;
+    }).join('');
+
+    oblacic.innerHTML = `<div style="color:#6E6A63;margin-bottom:2px">${razdobljeTekst(t)}</div>${redovi}`;
+    oblacic.style.opacity = 1;
+
+    const lijevoPx = cx / omjer;
+    const sirina = oblacic.offsetWidth;
+    let pos = lijevoPx + 12;
+    if (pos + sirina > okvir.width) pos = lijevoPx - sirina - 12;
+    oblacic.style.left = Math.max(0, pos) + 'px';
+    oblacic.style.top = '4px';
+  }
+
+  hvatac.addEventListener('mousemove', pokazi);
+  hvatac.addEventListener('touchmove', e => { pokazi(e.touches[0]); e.preventDefault(); }, {passive:false});
+  hvatac.addEventListener('mouseleave', () => {
+    oblacic.style.opacity = 0; kriz.style.opacity = 0;
+  });
+}
+
+// ===========================================================================
+// POKRETANJE
+// ===========================================================================
+
+let PODACI = {}, META = null, MJESECI_PRIKAZA = 0;
+
+function iscrtajSve(){
+  const mreza = document.getElementById('mreza');
+  mreza.innerHTML = KARTICE.map((k,i) => slozi(k, PODACI, MJESECI_PRIKAZA, i)).join('');
+  [...mreza.children].forEach((el,i) => ozivi(el, KARTICE[i], PODACI, MJESECI_PRIKAZA, i));
+}
+
+async function start(){
+  try{
+    META = await ucitajJSON('data/meta.json');
+    const imena = [...new Set(KARTICE.flatMap(k => k.serije.map(s => s.datoteka)))];
+    const ucitane = await Promise.all(imena.map(i => ucitajJSON('data/' + i + '.json')));
+    imena.forEach((ime,i) => PODACI[ime] = ucitane[i]);
+  } catch(greska){
+    document.getElementById('mreza').innerHTML =
+      '<p class="ucitavanje">Podaci trenutačno nisu dostupni.<br><small>' + greska.message + '</small></p>';
+    return;
+  }
+
+  // upozorenje ako je neka serija zastala ili pala
+  const problemi = (META.pokazatelji || []).filter(p => p.status !== 'ok');
+  if (problemi.length){
+    document.getElementById('upozorenja').innerHTML =
+      '<div class="upozorenje"><b>Napomena:</b> ' + problemi.length +
+      ' pokazatelj(a) nije osvježen(o) u zadnjem ciklusu (' +
+      problemi.map(p => p.id).join(', ') +
+      '). Prikazane su zadnje dostupne vrijednosti.</div>';
+  }
+
+  iscrtajSve();
+
+  const d = new Date(META.azurirano);
+  const datum = d.getDate() + '. ' + (d.getMonth()+1) + '. ' + d.getFullYear() + '.';
+  document.getElementById('podnozje').innerHTML =
+    'Zadnje ažuriranje: ' + datum + ' u ' +
+    d.toLocaleTimeString('hr-HR',{hour:'2-digit',minute:'2-digit'}) + '<br>' +
+    'Podaci: Eurostat i Europska središnja banka &nbsp;|&nbsp; Obrada: I. Brkljača';
+}
+
+document.getElementById('alatna').addEventListener('click', e => {
+  const gumb = e.target.closest('button');
+  if (!gumb) return;
+  [...e.currentTarget.querySelectorAll('button')].forEach(b => b.removeAttribute('aria-pressed'));
+  gumb.setAttribute('aria-pressed','true');
+  MJESECI_PRIKAZA = parseInt(gumb.dataset.mjeseci,10);
+  iscrtajSve();
+});
+
+window.addEventListener('resize', () => {
+  clearTimeout(window._t); window._t = setTimeout(iscrtajSve, 200);
+});
+
+start();
+</script>
+</body>
+</html>
