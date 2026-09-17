@@ -12,16 +12,26 @@ koje web-stranica onda cita i crta.
 Pokrece se sama svaki dan preko GitHub Actions (vidi .github/workflows/update.yml).
 Rucno se pokrece naredbom:  python fetch_data.py
 
+DVIJE ZASTITE koje ova skripta ima:
+
+1. Vise izvora po pokazatelju. Svaki pokazatelj ima popis mjesta odakle se
+   moze skinuti, poredanih po prednosti. Ako prvo mjesto ne radi (statisticari
+   povremeno gase i preimenuju tablice), skripta sama proba sljedece.
+
+2. Provjera svjezine. Ako serija postoji ali je prestala pristizati - sto je
+   podmukliji kvar od obicne greske, jer izgleda kao da sve radi - skripta to
+   oznaci u izvjestaju kao ZASTARJELO.
+
 Autor obrade podataka: I. Brkljaca
 """
 
 import json
 import csv
 import io
+import os
 import sys
 import datetime
 import urllib.request
-import urllib.error
 
 # ---------------------------------------------------------------------------
 # 1. POSTAVKE
@@ -30,6 +40,7 @@ import urllib.error
 POCETNO_RAZDOBLJE = "2015-01"   # od kada skidamo povijest
 MAPA_PODATAKA = "data"
 TIMEOUT = 60
+DOPUSTENO_KASNJENJE_MJESECI = 4  # koliko serija smije kasniti prije upozorenja
 
 EUROSTAT_BAZA = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data"
 ECB_BAZA = "https://data-api.ecb.europa.eu/service/data"
@@ -38,141 +49,143 @@ ECB_BAZA = "https://data-api.ecb.europa.eu/service/data"
 # ---------------------------------------------------------------------------
 # 2. POPIS POKAZATELJA
 # ---------------------------------------------------------------------------
-# Svaki pokazatelj je jedan redak ovdje. Da bi se dodao novi pokazatelj,
-# dovoljno je dopisati jedan ovakav blok - nista drugo se ne mijenja.
+# Svaki pokazatelj je jedan blok. Da bi se dodao novi, dopise se jedan ovakav
+# blok - nista drugo u skripti se ne mijenja.
 #
-#   id            - ime datoteke koja nastaje (data/<id>.json)
-#   naziv         - naslov kartice na dashboardu
-#   podnaslov     - mali opisni tekst ispod naslova
-#   izvor         - tekst koji pise u donjem desnom kutu kartice
-#   jedinica      - "indeks", "posto", "mio_eur"
-#   prikaz        - sto se prikazuje kao velika brojka na kartici:
-#                   "razina"    = zadnja vrijednost serije
-#                   "god_stopa" = godisnja stopa promjene (%)
-#   api           - "eurostat" ili "ecb"
-#   ostalo        - parametri upita, ovisno o izvoru
+#   id         - ime datoteke koja nastaje (data/<id>.json)
+#   naziv      - naslov kartice na dashboardu
+#   podnaslov  - mali opisni tekst ispod naslova
+#   jedinica   - "indeks", "posto" ili "mio_eur"
+#   prikaz     - velika brojka na kartici: "razina" ili "god_stopa"
+#   izvori     - popis mjesta odakle se podatak moze skinuti, po prednosti
 
 POKAZATELJI = [
     {
         "id": "ind_proizvodnja",
         "naziv": "Industrijska proizvodnja",
         "podnaslov": "Indeks obujma, sezonski prilagodeno (2021 = 100)",
-        "izvor": "Eurostat",
         "jedinica": "indeks",
         "prikaz": "god_stopa",
-        "api": "eurostat",
-        "tablica": "sts_inpr_m",
-        "filtri": {"geo": "HR", "nace_r2": "B-D", "indic_bt": "PRD",
-                   "s_adj": "SCA", "unit": "I21"},
+        "izvori": [
+            {"api": "eurostat", "oznaka": "Eurostat", "tablica": "sts_inpr_m",
+             "filtri": {"geo": "HR", "nace_r2": "B-D", "indic_bt": "PRD",
+                        "s_adj": "SCA", "unit": "I21"}},
+        ],
     },
     {
         "id": "maloprodaja",
         "naziv": "Trgovina na malo",
         "podnaslov": "Indeks obujma prodaje, sezonski prilagodeno (2021 = 100)",
-        "izvor": "Eurostat",
         "jedinica": "indeks",
         "prikaz": "god_stopa",
-        "api": "eurostat",
-        "tablica": "sts_trtu_m",
-        "filtri": {"geo": "HR", "nace_r2": "G47", "indic_bt": "VOL_SLS",
-                   "s_adj": "SCA", "unit": "I21"},
+        "izvori": [
+            {"api": "eurostat", "oznaka": "Eurostat", "tablica": "sts_trtu_m",
+             "filtri": {"geo": "HR", "nace_r2": "G47", "indic_bt": "VOL_SLS",
+                        "s_adj": "SCA", "unit": "I21"}},
+        ],
     },
     {
         "id": "gradjevinarstvo",
         "naziv": "Gradevinarstvo",
         "podnaslov": "Indeks obujma gradevinskih radova (2021 = 100)",
-        "izvor": "Eurostat",
         "jedinica": "indeks",
         "prikaz": "god_stopa",
-        "api": "eurostat",
-        "tablica": "sts_copr_m",
-        "filtri": {"geo": "HR", "nace_r2": "F", "indic_bt": "PRD",
-                   "s_adj": "SCA", "unit": "I21"},
+        "izvori": [
+            {"api": "eurostat", "oznaka": "Eurostat", "tablica": "sts_copr_m",
+             "filtri": {"geo": "HR", "nace_r2": "F", "indic_bt": "PRD",
+                        "s_adj": "SCA", "unit": "I21"}},
+        ],
     },
     {
         "id": "izvoz",
         "naziv": "Izvoz robe",
         "podnaslov": "Ukupan izvoz, milijuni eura, sezonski prilagodeno",
-        "izvor": "Eurostat",
         "jedinica": "mio_eur",
         "prikaz": "god_stopa",
-        "api": "eurostat",
-        "tablica": "ei_eteu27_2020_m",
-        "filtri": {"geo": "HR", "stk_flow": "EXP", "partner": "WORLD",
-                   "unit": "MIO-EUR-SA", "indic": "ET-T"},
+        "izvori": [
+            {"api": "eurostat", "oznaka": "Eurostat", "tablica": "ei_eteu27_2020_m",
+             "filtri": {"geo": "HR", "stk_flow": "EXP", "partner": "WORLD",
+                        "unit": "MIO-EUR-SA", "indic": "ET-T"}},
+        ],
     },
     {
         "id": "uvoz",
         "naziv": "Uvoz robe",
         "podnaslov": "Ukupan uvoz, milijuni eura, sezonski prilagodeno",
-        "izvor": "Eurostat",
         "jedinica": "mio_eur",
         "prikaz": "god_stopa",
-        "api": "eurostat",
-        "tablica": "ei_eteu27_2020_m",
-        "filtri": {"geo": "HR", "stk_flow": "IMP", "partner": "WORLD",
-                   "unit": "MIO-EUR-SA", "indic": "ET-T"},
+        "izvori": [
+            {"api": "eurostat", "oznaka": "Eurostat", "tablica": "ei_eteu27_2020_m",
+             "filtri": {"geo": "HR", "stk_flow": "IMP", "partner": "WORLD",
+                        "unit": "MIO-EUR-SA", "indic": "ET-T"}},
+        ],
     },
     {
         "id": "hicp_hr",
         "naziv": "Inflacija (HICP)",
         "podnaslov": "Godisnja stopa promjene cijena",
-        "izvor": "Eurostat (HICP)",
         "jedinica": "posto",
         "prikaz": "razina",
-        "api": "eurostat",
-        "tablica": "prc_hicp_manr",
-        "filtri": {"geo": "HR", "coicop": "CP00", "unit": "RCH_A"},
+        # Eurostat je 2026. ugasio tablicu prc_hicp_manr, pa je ECB sada prvi
+        # izbor. ECB objavljuje isti HICP koji mu Eurostat salje.
+        "izvori": [
+            {"api": "ecb", "oznaka": "ECB (HICP)", "skup": "ICP",
+             "kljuc": "M.HR.N.000000.4.ANR"},
+            {"api": "eurostat", "oznaka": "Eurostat (HICP)", "tablica": "prc_hicp_minr",
+             "filtri": {"geo": "HR", "coicop": "TOTAL", "unit": "RCH_A"}},
+            {"api": "eurostat", "oznaka": "Eurostat (HICP)", "tablica": "prc_hicp_minr",
+             "filtri": {"geo": "HR", "coicop": "CP00", "unit": "RCH_A"}},
+        ],
     },
     {
         "id": "hicp_temeljna",
         "naziv": "Temeljna inflacija",
         "podnaslov": "HICP bez energije, hrane, alkohola i duhana",
-        "izvor": "Eurostat (HICP)",
         "jedinica": "posto",
         "prikaz": "razina",
-        "api": "eurostat",
-        "tablica": "prc_hicp_manr",
-        # Eurostat je kroz godine mijenjao sifru za temeljnu inflaciju,
-        # pa probamo redom dok jedna ne uspije.
-        "filtri": {"geo": "HR", "coicop": "TOT_X_NRG_FOOD_NP", "unit": "RCH_A"},
-        "zamjenski_filtri": [
-            {"geo": "HR", "coicop": "TOT_X_NRG_FOOD", "unit": "RCH_A"},
-            {"geo": "HR", "coicop": "TOT_X_NRG_FOOD_NP_UNPR_FOOD", "unit": "RCH_A"},
+        "izvori": [
+            {"api": "ecb", "oznaka": "ECB (HICP)", "skup": "ICP",
+             "kljuc": "M.HR.N.XEF000.4.ANR"},
+            {"api": "eurostat", "oznaka": "Eurostat (HICP)", "tablica": "prc_hicp_minr",
+             "filtri": {"geo": "HR", "coicop": "TOT_X_NRG_FOOD", "unit": "RCH_A"}},
+            {"api": "eurostat", "oznaka": "Eurostat (HICP)", "tablica": "prc_hicp_minr",
+             "filtri": {"geo": "HR", "coicop": "TOT_X_NRG_FOOD_NP", "unit": "RCH_A"}},
         ],
     },
     {
         "id": "hicp_ea",
         "naziv": "Inflacija u europodrucju",
         "podnaslov": "Godisnja stopa promjene cijena, EA20",
-        "izvor": "Eurostat (HICP)",
         "jedinica": "posto",
         "prikaz": "razina",
-        "api": "eurostat",
-        "tablica": "prc_hicp_manr",
-        "filtri": {"geo": "EA20", "coicop": "CP00", "unit": "RCH_A"},
+        "izvori": [
+            {"api": "ecb", "oznaka": "ECB (HICP)", "skup": "ICP",
+             "kljuc": "M.U2.N.000000.4.ANR"},
+            {"api": "eurostat", "oznaka": "Eurostat (HICP)", "tablica": "prc_hicp_minr",
+             "filtri": {"geo": "EA20", "coicop": "TOTAL", "unit": "RCH_A"}},
+        ],
     },
     {
         "id": "esi",
         "naziv": "Ekonomski sentiment",
         "podnaslov": "Kompozitni indeks sentimenta (dugorocni prosjek = 100)",
-        "izvor": "Eurostat (DG ECFIN)",
         "jedinica": "indeks",
         "prikaz": "razina",
-        "api": "eurostat",
-        "tablica": "ei_bssi_m_r2",
-        "filtri": {"geo": "HR", "indic": "BS-ESI-I", "s_adj": "SA"},
+        "izvori": [
+            {"api": "eurostat", "oznaka": "Eurostat (DG ECFIN)", "tablica": "ei_bssi_m_r2",
+             "filtri": {"geo": "HR", "indic": "BS-ESI-I", "s_adj": "SA"}},
+        ],
     },
     {
         "id": "stambeni_krediti",
         "naziv": "Kamate na stambene kredite",
         "podnaslov": "Prosjecna kamata na nove stambene kredite kucanstvima",
-        "izvor": "ECB (MIR)",
         "jedinica": "posto",
         "prikaz": "razina",
-        "api": "ecb",
-        "skup": "MIR",
-        "kljuc": "M.HR.B.A2C.A.R.A.2250.EUR.N",
+        "izvori": [
+            {"api": "ecb", "oznaka": "ECB (MIR)", "skup": "MIR",
+             "kljuc": "M.HR.B.A2C.A.R.A.2250.EUR.N"},
+        ],
     },
 ]
 
@@ -211,13 +224,9 @@ def eurostat_serija(tablica, filtri):
 
     dimenzije = podaci["id"]
     velicine = podaci["size"]
-
-    # Gdje je vremenska dimenzija u nizu dimenzija
     i_vrijeme = dimenzije.index("time")
 
     # Sigurnosna provjera: filtri moraju suziti upit na tocno jednu seriju.
-    # Ako neka dimenzija osim vremena ima vise clanova, upit je premalo odreden
-    # i podaci bi se pomijesali - bolje da odmah javi gresku.
     for i, ime in enumerate(dimenzije):
         if i != i_vrijeme and velicine[i] > 1:
             raise ValueError(
@@ -225,11 +234,9 @@ def eurostat_serija(tablica, filtri):
                 "Dodaj je u filtre.".format(ime, velicine[i])
             )
 
-    # Obrnuta mapa: redni broj -> oznaka razdoblja (npr. 12 -> "2016-01")
     indeks_vremena = podaci["dimension"]["time"]["category"]["index"]
     razdoblje_po_poziciji = {v: k for k, v in indeks_vremena.items()}
 
-    # Koliko "koraka" u ravnom nizu vrijedi jedan pomak po vremenskoj dimenziji
     korak = 1
     for v in velicine[i_vrijeme + 1:]:
         korak *= v
@@ -291,30 +298,47 @@ def godisnje_stope(tocke):
     return rezultat
 
 
+def mjeseci_kasnjenja(razdoblje):
+    """Koliko mjeseci zadnji podatak zaostaje za danasnjim danom."""
+    try:
+        godina, mjesec = razdoblje.split("-")[0], razdoblje.split("-")[1]
+        danas = datetime.date.today()
+        return (danas.year - int(godina)) * 12 + (danas.month - int(mjesec))
+    except (ValueError, IndexError):
+        return None
+
+
 # ---------------------------------------------------------------------------
 # 4. GLAVNI DIO
 # ---------------------------------------------------------------------------
 
+def skini_iz_izvora(izvor):
+    """Skine seriju iz jednog konkretnog izvora."""
+    if izvor["api"] == "eurostat":
+        return eurostat_serija(izvor["tablica"], izvor["filtri"])
+    return ecb_serija(izvor["skup"], izvor["kljuc"])
+
+
 def obradi(pokazatelj):
     """Skine jedan pokazatelj i vrati gotov rjecnik spreman za spremanje."""
-    if pokazatelj["api"] == "eurostat":
-        pokusaji = [pokazatelj["filtri"]] + pokazatelj.get("zamjenski_filtri", [])
-        zadnja_greska = None
-        tocke = None
-        for filtri in pokusaji:
-            try:
-                tocke = eurostat_serija(pokazatelj["tablica"], filtri)
-                break
-            except Exception as greska:      # noqa: BLE001
-                zadnja_greska = greska
-        if tocke is None:
-            raise zadnja_greska
-    else:
-        tocke = ecb_serija(pokazatelj["skup"], pokazatelj["kljuc"])
+    tocke = None
+    upotrijebljeni = None
+    greske = []
+
+    for izvor in pokazatelj["izvori"]:
+        try:
+            tocke = skini_iz_izvora(izvor)
+            upotrijebljeni = izvor
+            break
+        except Exception as greska:          # noqa: BLE001
+            opis = izvor.get("tablica") or izvor.get("kljuc")
+            greske.append("{}: {}".format(opis, greska))
+
+    if tocke is None:
+        raise ValueError(" | ".join(greske))
 
     stope = godisnje_stope(tocke) if pokazatelj["jedinica"] != "posto" else []
 
-    # Velika brojka na kartici i promjena u odnosu na prethodno razdoblje
     if pokazatelj["prikaz"] == "god_stopa" and stope:
         glavna_serija = stope
     else:
@@ -328,7 +352,7 @@ def obradi(pokazatelj):
         "id": pokazatelj["id"],
         "naziv": pokazatelj["naziv"],
         "podnaslov": pokazatelj["podnaslov"],
-        "izvor": pokazatelj["izvor"],
+        "izvor": upotrijebljeni["oznaka"],
         "jedinica": pokazatelj["jedinica"],
         "prikaz": pokazatelj["prikaz"],
         "zadnje_razdoblje": glavna_serija[-1][0],
@@ -336,49 +360,73 @@ def obradi(pokazatelj):
         "promjena": promjena,
         "razine": [{"t": t, "v": v} for t, v in tocke],
         "god_stope": [{"t": t, "v": v} for t, v in stope],
+        "_dijagnostika": {
+            "upotrijebljeni_izvor": upotrijebljeni.get("tablica") or upotrijebljeni.get("kljuc"),
+            "neuspjeli_izvori": greske,
+        },
     }
 
 
 def main():
-    import os
     os.makedirs(MAPA_PODATAKA, exist_ok=True)
 
     izvjestaj = []
-    uspjelo, palo = 0, 0
+    uspjelo, palo, zastarjelo = 0, 0, 0
 
     for pokazatelj in POKAZATELJI:
         oznaka = pokazatelj["id"]
         try:
             rezultat = obradi(pokazatelj)
-            putanja = os.path.join(MAPA_PODATAKA, oznaka + ".json")
-            with open(putanja, "w", encoding="utf-8") as f:
+
+            kasni = mjeseci_kasnjenja(rezultat["zadnje_razdoblje"])
+            je_zastarjelo = kasni is not None and kasni > DOPUSTENO_KASNJENJE_MJESECI
+
+            with open(os.path.join(MAPA_PODATAKA, oznaka + ".json"), "w",
+                      encoding="utf-8") as f:
                 json.dump(rezultat, f, ensure_ascii=False, indent=1)
-            poruka = "OK   {:<20} zadnje: {} = {}".format(
-                oznaka, rezultat["zadnje_razdoblje"], rezultat["zadnja_vrijednost"]
-            )
-            izvjestaj.append({"id": oznaka, "status": "ok",
-                              "zadnje_razdoblje": rezultat["zadnje_razdoblje"]})
-            uspjelo += 1
+
+            stavka = {
+                "id": oznaka,
+                "status": "zastarjelo" if je_zastarjelo else "ok",
+                "zadnje_razdoblje": rezultat["zadnje_razdoblje"],
+                "kasni_mjeseci": kasni,
+                "izvor": rezultat["_dijagnostika"]["upotrijebljeni_izvor"],
+            }
+            if rezultat["_dijagnostika"]["neuspjeli_izvori"]:
+                stavka["preskoceni_izvori"] = rezultat["_dijagnostika"]["neuspjeli_izvori"]
+            izvjestaj.append(stavka)
+
+            if je_zastarjelo:
+                zastarjelo += 1
+                print("STARO {:<18} zadnje: {} (kasni {} mj.) - provjeri je li "
+                      "tablica ugasena".format(oznaka, rezultat["zadnje_razdoblje"], kasni),
+                      flush=True)
+            else:
+                uspjelo += 1
+                print("OK    {:<18} {} = {}".format(
+                    oznaka, rezultat["zadnje_razdoblje"], rezultat["zadnja_vrijednost"]),
+                    flush=True)
+
         except Exception as greska:          # noqa: BLE001
-            # Vazno: ako jedan pokazatelj padne, ostali se svejedno azuriraju,
+            # Ako jedan pokazatelj padne, ostali se svejedno azuriraju,
             # a stara datoteka tog pokazatelja ostaje netaknuta.
-            poruka = "PALO {:<20} {}".format(oznaka, greska)
-            izvjestaj.append({"id": oznaka, "status": "greska", "poruka": str(greska)})
             palo += 1
-        print(poruka, flush=True)
+            izvjestaj.append({"id": oznaka, "status": "greska", "poruka": str(greska)})
+            print("PALO  {:<18} {}".format(oznaka, greska), flush=True)
 
     meta = {
         "azurirano": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
         "uspjelo": uspjelo,
+        "zastarjelo": zastarjelo,
         "palo": palo,
         "pokazatelji": izvjestaj,
     }
     with open(os.path.join(MAPA_PODATAKA, "meta.json"), "w", encoding="utf-8") as f:
         json.dump(meta, f, ensure_ascii=False, indent=1)
 
-    print("\nGotovo: {} uspjesno, {} neuspjesno.".format(uspjelo, palo))
+    print("\nGotovo: {} svjeze, {} zastarjelo, {} neuspjelo.".format(
+        uspjelo, zastarjelo, palo))
 
-    # Ako bas nista nije uspjelo, javi gresku da to vidimo u GitHub Actions.
     if uspjelo == 0:
         sys.exit(1)
 
