@@ -1,7 +1,7 @@
 {
- "azurirano": "2026-09-17T18:52:34+00:00",
- "uspjelo": 7,
- "zastarjelo": 3,
+ "azurirano": "2026-09-17T18:56:33+00:00",
+ "uspjelo": 10,
+ "zastarjelo": 0,
  "palo": 0,
  "pokazatelji": [
   {
@@ -41,24 +41,24 @@
   },
   {
    "id": "hicp_hr",
-   "status": "zastarjelo",
-   "zadnje_razdoblje": "2025-12",
-   "kasni_mjeseci": 9,
-   "izvor": "M.HR.N.000000.4.ANR"
+   "status": "ok",
+   "zadnje_razdoblje": "2026-08",
+   "kasni_mjeseci": 1,
+   "izvor": "prc_hicp_minr"
   },
   {
    "id": "hicp_temeljna",
-   "status": "zastarjelo",
-   "zadnje_razdoblje": "2025-12",
-   "kasni_mjeseci": 9,
-   "izvor": "M.HR.N.XEF000.4.ANR"
+   "status": "ok",
+   "zadnje_razdoblje": "2026-08",
+   "kasni_mjeseci": 1,
+   "izvor": "prc_hicp_minr"
   },
   {
    "id": "hicp_ea",
-   "status": "zastarjelo",
-   "zadnje_razdoblje": "2025-12",
-   "kasni_mjeseci": 9,
-   "izvor": "M.U2.N.000000.4.ANR"
+   "status": "ok",
+   "zadnje_razdoblje": "2026-08",
+   "kasni_mjeseci": 1,
+   "izvor": "prc_hicp_minr"
   },
   {
    "id": "esi",
