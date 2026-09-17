@@ -1083,5 +1083,9 @@
    "t": "2026-08",
    "v": -0.48
   }
- ]
+ ],
+ "_dijagnostika": {
+  "upotrijebljeni_izvor": "ei_bssi_m_r2",
+  "neuspjeli_izvori": []
+ }
 }

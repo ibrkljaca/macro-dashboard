@@ -2,7 +2,7 @@
  "id": "hicp_hr",
  "naziv": "Inflacija (HICP)",
  "podnaslov": "Godisnja stopa promjene cijena",
- "izvor": "Eurostat (HICP)",
+ "izvor": "ECB (HICP)",
  "jedinica": "posto",
  "prikaz": "razina",
  "zadnje_razdoblje": "2025-12",
@@ -538,5 +538,9 @@
    "v": 3.8
   }
  ],
- "god_stope": []
+ "god_stope": [],
+ "_dijagnostika": {
+  "upotrijebljeni_izvor": "M.HR.N.000000.4.ANR",
+  "neuspjeli_izvori": []
+ }
 }

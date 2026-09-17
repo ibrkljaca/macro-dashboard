@@ -1075,5 +1075,9 @@
    "t": "2026-07",
    "v": 3.82
   }
- ]
+ ],
+ "_dijagnostika": {
+  "upotrijebljeni_izvor": "sts_trtu_m",
+  "neuspjeli_izvori": []
+ }
 }

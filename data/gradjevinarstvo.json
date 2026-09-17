@@ -1067,5 +1067,9 @@
    "t": "2026-06",
    "v": 4.38
   }
- ]
+ ],
+ "_dijagnostika": {
+  "upotrijebljeni_izvor": "sts_copr_m",
+  "neuspjeli_izvori": []
+ }
 }
