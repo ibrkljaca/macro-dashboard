@@ -1,8 +1,8 @@
 {
- "azurirano": "2026-09-18T05:03:06+00:00",
- "uspjelo": 10,
+ "azurirano": "2026-09-19T05:03:57+00:00",
+ "uspjelo": 9,
  "zastarjelo": 0,
- "palo": 0,
+ "palo": 1,
  "pokazatelji": [
   {
    "id": "ind_proizvodnja",
@@ -78,11 +78,8 @@
   },
   {
    "id": "stambeni_krediti",
-   "status": "ok",
-   "zadnje_razdoblje": "2026-07",
-   "kasni_mjeseci": 2,
-   "izvor": "M.HR.B.A2C.A.R.A.2250.EUR.N",
-   "stopa": "izracunato"
+   "status": "greska",
+   "poruka": "M.HR.B.A2C.A.R.A.2250.EUR.N: The read operation timed out"
   }
  ]
 }
