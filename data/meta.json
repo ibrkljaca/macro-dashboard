@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-09-23T05:03:04+00:00",
+ "azurirano": "2026-09-24T05:03:06+00:00",
  "uspjelo": 10,
  "zastarjelo": 0,
  "palo": 0,
@@ -23,8 +23,8 @@
   {
    "id": "gradjevinarstvo",
    "status": "ok",
-   "zadnje_razdoblje": "2026-06",
-   "kasni_mjeseci": 3,
+   "zadnje_razdoblje": "2026-07",
+   "kasni_mjeseci": 2,
    "izvor": "sts_copr_m",
    "stopa": "sluzbeno: sts_copr_m"
   },
