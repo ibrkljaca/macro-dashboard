@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-09-29T05:03:50+00:00",
+ "azurirano": "2026-09-30T05:05:15+00:00",
  "uspjelo": 10,
  "zastarjelo": 0,
  "palo": 0,
@@ -71,8 +71,8 @@
   {
    "id": "esi",
    "status": "ok",
-   "zadnje_razdoblje": "2026-08",
-   "kasni_mjeseci": 1,
+   "zadnje_razdoblje": "2026-09",
+   "kasni_mjeseci": 0,
    "izvor": "ei_bssi_m_r2",
    "stopa": "izracunato"
   },
