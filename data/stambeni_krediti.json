@@ -5,9 +5,9 @@
  "izvor": "ECB (MIR)",
  "jedinica": "posto",
  "prikaz": "razina",
- "zadnje_razdoblje": "2026-07",
+ "zadnje_razdoblje": "2026-08",
  "zadnja_vrijednost": 2.91,
- "promjena": 0.01,
+ "promjena": 0.0,
  "razine": [
   {
    "t": "2015-01",
@@ -563,6 +563,10 @@
   },
   {
    "t": "2026-07",
+   "v": 2.91
+  },
+  {
+   "t": "2026-08",
    "v": 2.91
   }
  ],
