@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-10-16T05:17:25+00:00",
+ "azurirano": "2026-10-17T05:14:31+00:00",
  "uspjelo": 10,
  "zastarjelo": 0,
  "palo": 0,
@@ -31,16 +31,16 @@
   {
    "id": "izvoz",
    "status": "ok",
-   "zadnje_razdoblje": "2026-07",
-   "kasni_mjeseci": 3,
+   "zadnje_razdoblje": "2026-08",
+   "kasni_mjeseci": 2,
    "izvor": "ei_eteu27_2020_m",
    "stopa": "izracunato"
   },
   {
    "id": "uvoz",
    "status": "ok",
-   "zadnje_razdoblje": "2026-07",
-   "kasni_mjeseci": 3,
+   "zadnje_razdoblje": "2026-08",
+   "kasni_mjeseci": 2,
    "izvor": "ei_eteu27_2020_m",
    "stopa": "izracunato"
   },
