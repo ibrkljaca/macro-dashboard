@@ -1,16 +1,13 @@
 {
- "azurirano": "2026-10-22T09:44:00+00:00",
- "uspjelo": 10,
+ "azurirano": "2026-10-23T09:39:59+00:00",
+ "uspjelo": 9,
  "zastarjelo": 0,
- "palo": 0,
+ "palo": 1,
  "pokazatelji": [
   {
    "id": "ind_proizvodnja",
-   "status": "ok",
-   "zadnje_razdoblje": "2026-08",
-   "kasni_mjeseci": 2,
-   "izvor": "sts_inpr_m",
-   "stopa": "sluzbeno: sts_inpr_m"
+   "status": "greska",
+   "poruka": "sts_inpr_m: Remote end closed connection without response"
   },
   {
    "id": "maloprodaja",
@@ -23,8 +20,8 @@
   {
    "id": "gradjevinarstvo",
    "status": "ok",
-   "zadnje_razdoblje": "2026-07",
-   "kasni_mjeseci": 3,
+   "zadnje_razdoblje": "2026-08",
+   "kasni_mjeseci": 2,
    "izvor": "sts_copr_m",
    "stopa": "sluzbeno: sts_copr_m"
   },
