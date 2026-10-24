@@ -1,13 +1,16 @@
 {
- "azurirano": "2026-10-23T09:39:59+00:00",
- "uspjelo": 9,
+ "azurirano": "2026-10-24T09:12:24+00:00",
+ "uspjelo": 10,
  "zastarjelo": 0,
- "palo": 1,
+ "palo": 0,
  "pokazatelji": [
   {
    "id": "ind_proizvodnja",
-   "status": "greska",
-   "poruka": "sts_inpr_m: Remote end closed connection without response"
+   "status": "ok",
+   "zadnje_razdoblje": "2026-08",
+   "kasni_mjeseci": 2,
+   "izvor": "sts_inpr_m",
+   "stopa": "sluzbeno: sts_inpr_m"
   },
   {
    "id": "maloprodaja",
