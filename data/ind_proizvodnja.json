@@ -5,9 +5,9 @@
  "izvor": "Eurostat",
  "jedinica": "indeks",
  "prikaz": "god_stopa",
- "zadnje_razdoblje": "2026-08",
- "zadnja_vrijednost": 5.2,
- "promjena": -1.9,
+ "zadnje_razdoblje": "2026-09",
+ "zadnja_vrijednost": 7.0,
+ "promjena": 1.8,
  "razine": [
   {
    "t": "2015-01",
@@ -568,6 +568,10 @@
   {
    "t": "2026-08",
    "v": 106.7
+  },
+  {
+   "t": "2026-09",
+   "v": 109.2
   }
  ],
  "god_stope": [
@@ -1130,6 +1134,10 @@
   {
    "t": "2026-08",
    "v": 5.2
+  },
+  {
+   "t": "2026-09",
+   "v": 7.0
   }
  ],
  "_dijagnostika": {
