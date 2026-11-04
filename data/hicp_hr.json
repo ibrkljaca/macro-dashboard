@@ -5,9 +5,9 @@
  "izvor": "Eurostat (HICP)",
  "jedinica": "posto",
  "prikaz": "razina",
- "zadnje_razdoblje": "2026-09",
- "zadnja_vrijednost": 4.3,
- "promjena": 0.6,
+ "zadnje_razdoblje": "2026-10",
+ "zadnja_vrijednost": 4.4,
+ "promjena": 0.1,
  "razine": [
   {
    "t": "2015-01",
@@ -572,6 +572,10 @@
   {
    "t": "2026-09",
    "v": 4.3
+  },
+  {
+   "t": "2026-10",
+   "v": 4.4
   }
  ],
  "god_stope": [],

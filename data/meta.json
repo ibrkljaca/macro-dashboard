@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-03T12:29:22+00:00",
+ "azurirano": "2026-11-04T12:39:43+00:00",
  "uspjelo": 10,
  "zastarjelo": 0,
  "palo": 0,
@@ -47,24 +47,24 @@
   {
    "id": "hicp_hr",
    "status": "ok",
-   "zadnje_razdoblje": "2026-09",
-   "kasni_mjeseci": 2,
+   "zadnje_razdoblje": "2026-10",
+   "kasni_mjeseci": 1,
    "izvor": "prc_hicp_minr",
    "stopa": "izracunato"
   },
   {
    "id": "hicp_temeljna",
    "status": "ok",
-   "zadnje_razdoblje": "2026-09",
-   "kasni_mjeseci": 2,
+   "zadnje_razdoblje": "2026-10",
+   "kasni_mjeseci": 1,
    "izvor": "prc_hicp_minr",
    "stopa": "izracunato"
   },
   {
    "id": "hicp_ea",
    "status": "ok",
-   "zadnje_razdoblje": "2026-09",
-   "kasni_mjeseci": 2,
+   "zadnje_razdoblje": "2026-10",
+   "kasni_mjeseci": 1,
    "izvor": "prc_hicp_minr",
    "stopa": "izracunato"
   },
