@@ -1,4 +1,813 @@
 {
+ "xlsx_pregled": {
+  "9.3.1.": [
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Napomena ",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Od 20. ožujka 2026., s objavom podataka ",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Notice",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "From 20 March 2026, with the publication",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "euro/ Euro",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "kune/ Kuna",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "Ø 2015.",
+    "X.   2025. ",
+    "XI.   2025. ",
+    "XII.   2025. ",
+    "VI.   2025. "
+   ],
+   [
+    "Ukupno",
+    "",
+    "",
+    "",
+    "Total",
+    "742.0",
+    "1470.0",
+    "1498.0",
+    "1494.0",
+    ""
+   ]
+  ],
+  "9.3.2.": [
+   [
+    "9.3.2.",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA ",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "AVERAGE MONTHLY PAID OFF NET EARNINGS PE",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Molimo korisnike da pri korištenju podat",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Users are kindly requested to state the ",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "euro/ Euro",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "kune/ Kuna",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "Ø 2010.",
+    "Ø 2011.",
+    "Ø 2012.",
+    "IX. 2015.",
+    "X. 2015. ",
+    "XI. 2015. ",
+    "XII. 2015. "
+   ],
+   [
+    "Ukupno",
+    "",
+    "Total",
+    "709.0",
+    "722.0",
+    "727.0",
+    "749.0",
+    "759.0",
+    "777.0",
+    "766.0"
+   ]
+  ],
+  "9.3.6.": [
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Napomena ",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Od 20. ožujka 2026., s objavom podataka ",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Notice",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "From 20 March 2026, with the publication",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "euro/ Euro",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "kune/ Kuna",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "Ø I. − II. 2015.",
+    "Ø I. ‒ IX. 2025.",
+    "Ø I. ‒ X. 2025.",
+    "Ø I. ‒ XI. 2025.",
+    "Ø  2025."
+   ],
+   [
+    "Ukupno",
+    "",
+    "",
+    "",
+    "Total",
+    "734.0",
+    "1437.0",
+    "1440.0",
+    "1445.0",
+    "1449.0"
+   ]
+  ],
+  "9.3.7.": [
+   [
+    "9.3.7.",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA ",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "AVERAGE MONTHLY PAID OFF NET EARNINGS PE",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Molimo korisnike da pri korištenju podat",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Users are kindly requested to state the ",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "euro/ Euro",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "kune/ Kuna",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "Ø I. − II. 2010.",
+    "Ø I. − III. \n2010.",
+    "Ø I. − IV. \n2010.",
+    "Ø I. − IX.\n2015.",
+    "Ø I. − X.\n2015.",
+    "Ø I. − XI.\n2015.",
+    "Ø   2015."
+   ],
+   [
+    "Ukupno",
+    "",
+    "Total",
+    "691.0",
+    "698.0",
+    "698.0",
+    "755.0",
+    "755.0",
+    "757.0",
+    "758.0"
+   ]
+  ],
+  "9.3.10.": [
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Napomena ",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Od 20. ožujka 2026., s objavom podataka ",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Notice",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "From 20 March 2026, with the publication",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "euro/ Euro",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "kune/ Kuna",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "Ø I. − III. 2015.",
+    "Ø I. – VI. 2025.",
+    "Ø VII. – IX. 2025.",
+    "Ø X. – XII. 2025.",
+    "Ø VII. – XII. 2025."
+   ],
+   [
+    "Ukupno",
+    "",
+    "",
+    "",
+    "Total",
+    "737.0",
+    "1432.0",
+    "1446.0",
+    "1487.0",
+    "1466.0"
+   ]
+  ],
+  "9.3.24.": [
+   [
+    "9.3.24.",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA ",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "AVERAGE MONTHLY PAID OFF NET EARNINGS PE",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Molimo korisnike da pri korištenju podat",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Users are kindly requested to state the ",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "euro/ Euro",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "kune/ Kuna",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "Ø  2019.",
+    "Ø I. − VI. 2019.",
+    "Ø VII. − IX. 2019.",
+    "Ø X. − XII. 2019.",
+    "Ø VII. − XII. 2019."
+   ],
+   [
+    "Ukupno",
+    "",
+    "",
+    "",
+    "Total",
+    "874.0",
+    "873.0",
+    "867.0",
+    "881.0",
+    "874.0"
+   ]
+  ],
+  "9.3.28. NOVO-NEW": [
+   [
+    "9.3.28.",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA ",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "AVERAGE MONTHLY PAID OFF NET EARNINGS PE",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Molimo korisnike da pri korištenju podat",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Users are kindly requested to state the ",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "euro/ Euro",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "kune/ Kuna",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "Ø 2020. ukupno Total",
+    "XI. 2025. muškarci Men",
+    "XII. 2025. ukupno Total",
+    "XII. 2025. žene Women",
+    "XII. 2025. muškarci Men"
+   ],
+   [
+    "Ukupno",
+    "",
+    "",
+    "",
+    "Total",
+    "898.0",
+    "1522.0",
+    "1494.0",
+    "1459.0",
+    "1522.0"
+   ]
+  ]
+ },
+ "xlsx_listovi": {
+  "9.3.1.": [
+   132,
+   "2015-01",
+   "2025-12"
+  ],
+  "9.3.2.": [
+   72,
+   "2010-01",
+   "2015-12"
+  ],
+  "9.3.6.": [
+   0,
+   null,
+   null
+  ],
+  "9.3.7.": [
+   0,
+   null,
+   null
+  ],
+  "9.3.10.": [
+   0,
+   null,
+   null
+  ],
+  "9.3.24.": [
+   12,
+   "2019-01",
+   "2019-12"
+  ],
+  "9.3.28. NOVO-NEW": [
+   72,
+   "2020-01",
+   "2025-12"
+  ]
+ },
  "pxweb_korijen": [
   {
    "dbid": "Cijene",
@@ -147,4954 +956,149 @@
    "azurirano": "2026-08-19T13:05:48"
   }
  ],
- "place_upotrijebljene": [],
- "place_odbacene": [
+ "tablice_varijable": {
+  "Zaposlenost i plaće/Od 2025/T01.px": [
+   {
+    "code": "DJELATNOST",
+    "text": "DJELATNOST",
+    "time": null,
+    "broj": 103,
+    "vrijednosti": [
+     "UKUPNO",
+     "POLJOPRIVREDA, ŠUMARSTVO I RIBARSTVO",
+     "Biljna i stočarska proizvodnja, lovstvo i uslužne djelatnosti povezane s njima",
+     "Šumarstvo i sječa drva",
+     "Ribolov i akvakultura",
+     "RUDARSTVO I VAĐENJE",
+     "Vađenje sirove nafte i prirodnog plina",
+     "Ostalo rudarstvo i vađenje",
+     "Pomoćne uslužne djelatnosti u rudarstvu",
+     "PRERAĐIVAČKA INDUSTRIJA",
+     "Proizvodnja prehrambenih proizvoda",
+     "Proizvodnja pića",
+     "Proizvodnja duhanskih proizvoda",
+     "Proizvodnja tekstila",
+     "Proizvodnja odjeće"
+    ]
+   },
+   {
+    "code": "GODINA",
+    "text": "GODINA",
+    "time": null,
+    "broj": 2,
+    "vrijednosti": [
+     "2025.",
+     "2026."
+    ]
+   },
+   {
+    "code": "PERIOD",
+    "text": "PERIOD",
+    "time": null,
+    "broj": 19,
+    "vrijednosti": [
+     "I.-XII.",
+     "I.",
+     "II.",
+     "III.",
+     "IV.",
+     "V.",
+     "VI.",
+     "VII.",
+     "VIII.",
+     "IX.",
+     "X.",
+     "XI.",
+     "XII.",
+     "Q1",
+     "Q2"
+    ]
+   },
+   {
+    "code": "PLAĆA",
+    "text": "PLAĆA",
+    "time": null,
+    "broj": 2,
+    "vrijednosti": [
+     "BRUTO",
+     "NETO"
+    ]
+   }
+  ]
+ },
+ "place_upotrijebljene": [
   {
    "putanja": "Zaposlenost i plaće/Od 2025/T01.px",
    "naziv": "1 PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA NKD-u 2025. _ OBRADA PREMA JOPPD OBRASCU",
-   "razlog": "vrijeme nije mjesecno (npr. ['2025.', '2026.'])"
-  },
-  {
-   "putanja": "Zaposlenost i plaće/Od 2025/T08.px",
-   "naziv": "8. DISTRIBUCIJA NETO I BRUTO PLAĆA PO PERCENTILIMA I MJESECIMA, OBRADA PREMA OBRASCU JOPPD",
-   "razlog": "vrijeme nije mjesecno (npr. ['2025.', '2026.'])"
+   "azurirano": "2026-10-16T12:51:38",
+   "naslov": "1 PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA NKD-u 2025. _ OBRADA PREMA JOPPD OBRASCU",
+   "odabrano": {
+    "DJELATNOST": "UKUPNO",
+    "PLAĆA": "NETO"
+   },
+   "od": "2025-01",
+   "do": "2026-08"
   }
  ],
- "xlsx_pregled": {
-  "Sadrzaj-Contents": [
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PLAĆE",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "WAGES",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "KRATICE I ZNAKOVI",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "ABBREVIATIONS AND SYMBOLS",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Tab. 9.3.1.",
-    "",
-    "PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA PO ZAPOSLENOME U PRA",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "AVERAGE MONTHLY PAID OFF NET EARNINGS PER PERSON IN PAID EMP",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Tab. 9.3.2.",
-    "",
-    "PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA PO ZAPOSLENOME U PRA",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "AVERAGE MONTHLY PAID OFF NET EARNINGS PER PERSON IN PAID EMP",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "CORRECTIONS",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ]
-  ],
-  "Kratice-Abbreviations": [
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "KRATICE",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "ABBREVIATIONS",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "NKD 2007.",
-    "",
-    "Nacionalna klasifikacija djelatnosti, verzija 2007.",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "tis.",
-    "",
-    "tisuća",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "z",
-    "",
-    "Podatak zbog povjerljivosti nije objavljen",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "NKD 2007",
-    "",
-    "National Classification of Activities, 2007 version",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "z",
-    "",
-    "data are not published for confidentiality reasons",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "0.0",
-    "",
-    "value non zero but less than 0.05 of the unit of measure use",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ]
-  ],
-  "9.3.1.": [
-   [
-    "9.3.1.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA PO ZAPOSLENOME U PRA",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY PAID OFF NET EARNINGS PER PERSON IN PAID EMP",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.2.": [
-   [
-    "9.3.2.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA PO ZAPOSLENOME U PRA",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY PAID OFF NET EARNINGS PER PERSON IN PAID EMP",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "Ø 2010.",
-    "Ø 2011.",
-    "Ø 2012.",
-    "Ø 2013.",
-    "Ø 2014."
-   ],
-   [
-    "Ukupno",
-    "",
-    "Total",
-    "709.0",
-    "722.0",
-    "727.0",
-    "732.0",
-    "734.0"
-   ],
-   [
-    "A",
-    "Poljoprivreda, šumarstvo i ribarstvo",
-    "Agriculture, forestry and fishing",
-    "623.0",
-    "645.0",
-    "666.0",
-    "670.0",
-    "659.0"
-   ],
-   [
-    "B",
-    "Rudarstvo i vađenje",
-    "Mining and quarrying",
-    "902.0",
-    "906.0",
-    "896.0",
-    "891.0",
-    "886.0"
-   ],
-   [
-    "C",
-    "Prerađivačka industrija",
-    "Manufacturing",
-    "620.0",
-    "630.0",
-    "641.0",
-    "650.0",
-    "658.0"
-   ],
-   [
-    "U",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.3.": [
-   [
-    "9.3.3.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA BRUTO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOB",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY GROSS EARNINGS PER PERSON IN PAID EMPLOYMENT",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    " ",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.4.": [
-   [
-    "9.3.4.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA BRUTO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOB",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY GROSS EARNINGS PER PERSON IN PAID EMPLOYMENT",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "Ø 2010.",
-    "Ø 2011.",
-    "Ø 2012.",
-    "Ø 2013.",
-    "Ø 2014."
-   ],
-   [
-    "Ukupno",
-    "",
-    "Total",
-    "1019.0",
-    "1035.0",
-    "1045.0",
-    "1054.0",
-    "1056.0"
-   ],
-   [
-    "A",
-    "Poljoprivreda, šumarstvo i ribarstvo",
-    "Agriculture, forestry and fishing",
-    "858.0",
-    "887.0",
-    "915.0",
-    "921.0",
-    "902.0"
-   ],
-   [
-    "B",
-    "Rudarstvo i vađenje",
-    "Mining and quarrying",
-    "1322.0",
-    "1318.0",
-    "1311.0",
-    "1295.0",
-    "1289.0"
-   ],
-   [
-    "C",
-    "Prerađivačka industrija",
-    "Manufacturing",
-    "878.0",
-    "890.0",
-    "906.0",
-    "921.0",
-    "935.0"
-   ],
-   [
-    "U",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.5.": [
-   [
-    "9.3.5.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA ISPLAĆENA NETO I BRUTO PLAĆA PO ZAPOSLENO",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY PAID OFF NET AND GROSS EARNINGS PER PERSON I",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "I. – III.\n2010.\nneto",
-    "I. – III.\n2010.\nbruto",
-    "II. – IV.\n2010.\nneto",
-    "II. – IV.\n2010.\nbruto",
-    "III. – V.\n2010.\nneto"
-   ],
-   [
-    "",
-    "",
-    "",
-    "Net",
-    "Gross",
-    "Net",
-    "Gross",
-    "Net"
-   ],
-   [
-    "Ukupno",
-    "",
-    "Total",
-    "698.0",
-    "1014.0",
-    "697.0",
-    "1013.0",
-    "703.0"
-   ],
-   [
-    "A",
-    "Poljoprivreda, šumarstvo i ribarstvo",
-    "Agriculture, forestry and fishing",
-    "597.0",
-    "828.0",
-    "602.0",
-    "836.0",
-    "608.0"
-   ],
-   [
-    "B",
-    "Rudarstvo i vađenje",
-    "Mining and quarrying",
-    "879.0",
-    "1295.0",
-    "884.0",
-    "1303.0",
-    "896.0"
-   ],
-   [
-    "1) The results of processing data from JOPPD forms. ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ]
-  ],
-  "9.3.6.": [
-   [
-    "9.3.6.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA PO ZAPOSLENOME U PRA",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY PAID OFF NET EARNINGS PER PERSON IN PAID EMP",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.7.": [
-   [
-    "9.3.7.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA PO ZAPOSLENOME U PRA",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY PAID OFF NET EARNINGS PER PERSON IN PAID EMP",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "Ø I. − II. 2010.",
-    "Ø I. − III. \n2010.",
-    "Ø I. − IV. \n2010.",
-    "Ø I. − V.\n2010.",
-    "Ø I. − VI.\n2010."
-   ],
-   [
-    "Ukupno",
-    "",
-    "Total",
-    "691.0",
-    "698.0",
-    "698.0",
-    "698.0",
-    "702.0"
-   ],
-   [
-    "A",
-    "Poljoprivreda, šumarstvo i ribarstvo",
-    "Agriculture, forestry and fishing",
-    "583.0",
-    "597.0",
-    "601.0",
-    "598.0",
-    "604.0"
-   ],
-   [
-    "B",
-    "Rudarstvo i vađenje",
-    "Mining and quarrying",
-    "873.0",
-    "879.0",
-    "894.0",
-    "887.0",
-    "898.0"
-   ],
-   [
-    "C",
-    "Prerađivačka industrija",
-    "Manufacturing",
-    "597.0",
-    "607.0",
-    "607.0",
-    "607.0",
-    "612.0"
-   ],
-   [
-    "U",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.8.": [
-   [
-    "9.3.8.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA BRUTO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOB",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY GROSS EARNINGS PER PERSON IN PAID EMPLOYMENT",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.9.": [
-   [
-    "9.3.9.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA BRUTO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOB",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY GROSS EARNINGS PER PERSON IN PAID EMPLOYMENT",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "Ø I. − II. 2010.",
-    "Ø I. − III. 2010.",
-    "Ø I. − IV. 2010.",
-    "Ø I. − V. 2010.",
-    "Ø I. − VI. 2010."
-   ],
-   [
-    "Ukupno",
-    "",
-    "Total",
-    "1000.0",
-    "1014.0",
-    "1013.0",
-    "1013.0",
-    "1016.0"
-   ],
-   [
-    "A",
-    "Poljoprivreda, šumarstvo i ribarstvo",
-    "Agriculture, forestry and fishing",
-    "805.0",
-    "828.0",
-    "834.0",
-    "829.0",
-    "837.0"
-   ],
-   [
-    "B",
-    "Rudarstvo i vađenje",
-    "Mining and quarrying",
-    "1285.0",
-    "1295.0",
-    "1320.0",
-    "1308.0",
-    "1325.0"
-   ],
-   [
-    "C",
-    "Prerađivačka industrija",
-    "Manufacturing",
-    "851.0",
-    "870.0",
-    "868.0",
-    "869.0",
-    "874.0"
-   ],
-   [
-    "U",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.10.": [
-   [
-    "9.3.10.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNE MJESEČNE ISPLAĆENE NETO PLAĆE PO ZAPOSLENOME U PRA",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY PAID OFF NET EARNINGS PER PERSON IN PAID EMP",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.11.": [
-   [
-    "9.3.11.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNE MJESEČNE BRUTO PLAĆE PO ZAPOSLENOME U PRAVNIM OSOB",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY GROSS EARNINGS PER PERSON IN PAID EMPLOYMENT",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.12.": [
-   [
-    "9.3.12.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNE MJESEČNE ISPLAĆENE NETO PLAĆE PO SATU ZAPOSLENIH U",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY PAID OFF NET EARNINGS PER HOUR OF WORK  IN L",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.13.": [
-   [
-    "9.3.13.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNE MJESEČNE BRUTO PLAĆE PO SATU ZAPOSLENIH U PRAVNIM ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY GROSS EARNINGS PER HOUR OF WORK  IN LEGAL EN",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.14.": [
-   [
-    "9.3.14.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNE MJESEČNE ISPLAĆENE NETO PLAĆE PO SATU ZAPOSLENIH U",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY PAID OFF NET EARNINGS PER HOUR OF WORK  IN L",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.15.": [
-   [
-    "9.3.15.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNE MJESEČNE BRUTO PLAĆE PO SATU ZAPOSLENIH U PRAVNIM ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY GORSS EARNINGS PER HOUR OF WORK  IN LEGAL EN",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.16.": [
-   [
-    "9.3.16.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČAN BROJ PLAĆENIH SATI RADA U PRAVNIM OSOBAMA PREMA NK",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE NUMBER OF PAID HOURS  IN LEGAL ENTITIES, ACCORDING T",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "Ø 2015.",
-    "Ø 2016.",
-    "Ø 2017."
-   ],
-   [
-    "Ukupno",
-    "",
-    "",
-    "",
-    "Total",
-    "173.0",
-    "173.0",
-    "172.0"
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.17.": [
-   [
-    "9.3.17.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČAN BROJ PLAĆENIH SATI RADA U PRAVNIM OSOBAMA PREMA NK",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE NUMBER OF PAID HOURS  IN LEGAL ENTITIES, ACCORDING T",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "Ø I. − II. 2015.",
-    "Ø I. − III. 2015.",
-    "Ø I. − IV. 2015."
-   ],
-   [
-    "Ukupno",
-    "",
-    "",
-    "",
-    "Total",
-    "167.0",
-    "170.0",
-    "171.0"
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.18.": [
-   [
-    "9.3.18.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "MEDIJALNA NETO I BRUTO PLAĆA ‒ MJESECI, OBRADA PREMA OBRASCU",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "MEDIAN NET AND GROSS EARNINGS – MONTHS, PROCESSING BASED ON ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Medijalna plaća",
-    "",
-    "",
-    "",
-    "Median earnings",
-    "4945.0",
-    "6347.0",
-    "4905.0"
-   ]
-  ],
-  "9.3.19.": [
-   [
-    "9.3.19.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "DISTRIBUCIJA NETO I BRUTO PLAĆA PO DECILIMA – MJESECI, OBRAD",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "DISTRIBUTION OF NET AND GROSS EARNINGS BY DECILES – MONTHS, ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    " Deseti decil ",
-    "",
-    "",
-    "Tenth decile",
-    "z",
-    "z",
-    "z",
-    "z"
-   ]
-  ],
-  "9.3.20.": [
-   [
-    "9.3.20.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "DISTRIBUCIJA NETO I BRUTO PLAĆA PO KVARTILIMA – MJESECI, OBR",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "DISTRIBUTION OF NET AND GROSS EARNINGS BY QUARTILES – MONTHS",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Četvrti kvartil",
-    "",
-    "",
-    "Fourth quartile",
-    "z",
-    "z",
-    "z",
-    "z"
-   ]
-  ],
-  "9.3.21.": [
-   [
-    "9.3.21.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNI MJESEČNI NEOPOREZIVI PRIMICI PO BROJU PRIMATELJA U",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY NON-TAXABLE INCOMES, BY NUMBER OF RECEIVERS ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "1) The results of processing data from JOPPD forms. ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ]
-  ],
-  "9.3.22.": [
-   [
-    "9.3.22.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNI MJESEČNI NEOPOREZIVI PRIMICI PO BROJU ZAPOSLENIH K",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY NON-TAXABLE INCOMES, BY NUMBER OF PERSONS IN",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Od 20. ožujka 2026., s objavom podataka za siječanj 2026., v",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "From 20 March 2026, with the publication of data for January",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "1) The results of processing data from JOPPD forms. ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ]
-  ],
-  "9.3.23": [
-   [
-    "9.3.23.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "STRUKTURA NEOPOREZIVIH PRIMITAKA U PRAVNIM OSOBAMA PREMA POD",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "STRUCTURE OF NON-TAXABLE INCOMES IN LEGAL ENTITIES, ACCORDIN",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Napomena ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Zbog prelaska na novu klasifikaciju djelatnosti, NKD 2025., ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Notice",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Due to the transition to the new classification of activitie",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "%",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "I. 2016. ",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "– premije dopunskoga i dodatnoga zdravstvenog osiguranja – u",
-    "– premiums of supplemental and additional health inisurance ",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ]
-  ],
-  "9.3.24.": [
-   [
-    "9.3.24.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA PO ZAPOSLENOME U PRA",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY PAID OFF NET EARNINGS PER PERSON IN PAID EMP",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "Ø  2019.",
-    "I.   2019. ",
-    "II.  2019. "
-   ],
-   [
-    "Ukupno",
-    "",
-    "",
-    "",
-    "Total",
-    "874.0",
-    "865.0",
-    "866.0"
-   ],
-   [
-    "A ",
-    "Poljoprivreda, šumarstvo i ribarstvo",
-    "",
-    "",
-    "Agriculture, forestry and fishing",
-    "767.0",
-    "766.0",
-    "739.0"
-   ],
-   [
-    "",
-    "01",
-    "Biljna i stočarska proizvodnja, lovstvo i uslužne djelatnost",
-    "",
-    "Crop and animal production, hunting and related service acti",
-    "708.0",
-    "693.0",
-    "686.0"
-   ],
-   [
-    "",
-    "02",
-    "Šumarstvo i sječa drva",
-    "",
-    "Forestry and logging",
-    "847.0",
-    "867.0",
-    "812.0"
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.25.": [
-   [
-    "9.3.25.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA BRUTO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOB",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY GROSS EARNINGS PER PERSON IN PAID EMPLOYMENT",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "Ø 2019.",
-    "I. 2019. ",
-    "II. 2019. "
-   ],
-   [
-    "Ukupno",
-    "",
-    "",
-    "",
-    "Total",
-    "1194.0",
-    "1178.0",
-    "1183.0"
-   ],
-   [
-    "A ",
-    "Poljoprivreda, šumarstvo i ribarstvo",
-    "",
-    "",
-    "Agriculture, forestry and fishing",
-    "1014.0",
-    "1011.0",
-    "972.0"
-   ],
-   [
-    "",
-    "01",
-    "Biljna i stočarska proizvodnja, lovstvo i uslužne djelatnost",
-    "",
-    "Crop and animal production, hunting and related service acti",
-    "921.0",
-    "896.0",
-    "889.0"
-   ],
-   [
-    "",
-    "02",
-    "Šumarstvo i sječa drva",
-    "",
-    "Forestry and logging",
-    "1133.0",
-    "1167.0",
-    "1080.0"
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.26.": [
-   [
-    "9.3.26.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA PO SATU ZAPOSLENIH U",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY PAID OFF NET EARNINGS PER HOUR OF WORK IN PA",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "Ø 2019.",
-    "I. 2019. ",
-    "II. 2019. "
-   ],
-   [
-    "Ukupno",
-    "",
-    "",
-    "",
-    "Total",
-    "4.95",
-    "4.66",
-    "5.33"
-   ],
-   [
-    "A ",
-    "Poljoprivreda, šumarstvo i ribarstvo",
-    "",
-    "",
-    "Agriculture, forestry and fishing",
-    "4.35",
-    "4.12",
-    "4.56"
-   ],
-   [
-    "",
-    "01",
-    "Biljna i stočarska proizvodnja, lovstvo i uslužne djelatnost",
-    "",
-    "Crop and animal production, hunting and related service acti",
-    "4.01",
-    "3.73",
-    "4.22"
-   ],
-   [
-    "",
-    "02",
-    "Šumarstvo i sječa drva",
-    "",
-    "Forestry and logging",
-    "4.81",
-    "4.68",
-    "5.03"
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.27.": [
-   [
-    "9.3.27.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA BRUTO PLAĆA PO SATU ZAPOSLENIH U PRAVNIM ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY GROSS EARNINGS PER HOUR OF WORK IN PAID EMPL",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "Ø 2019.",
-    "I.  2019. ",
-    "II. 2019. "
-   ],
-   [
-    "Ukupno",
-    "",
-    "",
-    "",
-    "Total",
-    "6.76",
-    "6.35",
-    "7.29"
-   ],
-   [
-    "A ",
-    "Poljoprivreda, šumarstvo i ribarstvo",
-    "",
-    "",
-    "Agriculture, forestry and fishing",
-    "5.75",
-    "5.45",
-    "5.99"
-   ],
-   [
-    "",
-    "01",
-    "Biljna i stočarska proizvodnja, lovstvo i uslužne djelatnost",
-    "",
-    "Crop and animal production, hunting and related service acti",
-    "5.22",
-    "4.83",
-    "5.47"
-   ],
-   [
-    "",
-    "02",
-    "Šumarstvo i sječa drva",
-    "",
-    "Forestry and logging",
-    "6.44",
-    "6.29",
-    "6.69"
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.28. NOVO-NEW": [
-   [
-    "9.3.28.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA PO ZAPOSLENOME U PRA",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY PAID OFF NET EARNINGS PER PERSON IN PAID EMP",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "Ø 2020. ukupno Total",
-    "Ø 2020. žene Women",
-    "Ø 2020. muškarci Men"
-   ],
-   [
-    "Ukupno",
-    "",
-    "",
-    "",
-    "Total",
-    "898.0",
-    "864.0",
-    "926.0"
-   ],
-   [
-    "A ",
-    "Poljoprivreda, šumarstvo i ribarstvo",
-    "",
-    "",
-    "Agriculture, forestry and fishing",
-    "784.0",
-    "723.0",
-    "806.0"
-   ],
-   [
-    "",
-    "01",
-    "Biljna i stočarska proizvodnja, lovstvo i uslužne djelatnost",
-    "",
-    "Crop and animal production, hunting and related service acti",
-    "729.0",
-    "681.0",
-    "753.0"
-   ],
-   [
-    "",
-    "02",
-    "Šumarstvo i sječa drva",
-    "",
-    "Forestry and logging",
-    "854.0",
-    "811.0",
-    "863.0"
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.29. NOVO-NEW": [
-   [
-    "9.3.29.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA BRUTO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOB",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY GROSS EARNINGS PER PERSON IN PAID EMPLOYMENT",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "Ø 2020. ukupno Total",
-    "Ø 2020. žene Women",
-    "Ø 2020. muškarci Men"
-   ],
-   [
-    "Ukupno",
-    "",
-    "",
-    "",
-    "Total",
-    "1223.0",
-    "1176.0",
-    "1263.0"
-   ],
-   [
-    "A ",
-    "Poljoprivreda, šumarstvo i ribarstvo",
-    "",
-    "",
-    "Agriculture, forestry and fishing",
-    "1031.0",
-    "949.0",
-    "1060.0"
-   ],
-   [
-    "",
-    "01",
-    "Biljna i stočarska proizvodnja, lovstvo i uslužne djelatnost",
-    "",
-    "Crop and animal production, hunting and related service acti",
-    "945.0",
-    "878.0",
-    "979.0"
-   ],
-   [
-    "",
-    "02",
-    "Šumarstvo i sječa drva",
-    "",
-    "Forestry and logging",
-    "1137.0",
-    "1098.0",
-    "1145.0"
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.30. NOVO-NEW": [
-   [
-    "9.3.30.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA PO PLAĆENOM SATU U P",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY PAID OFF NET EARNINGS PER PAID HOUR IN LEGAL",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "Ø 2020. ukupno Total",
-    "Ø 2020. žene Women",
-    "Ø 2020. muškarci Men"
-   ],
-   [
-    "Ukupno",
-    "",
-    "",
-    "",
-    "Total",
-    "5.08",
-    "4.9",
-    "5.23"
-   ],
-   [
-    "A ",
-    "Poljoprivreda, šumarstvo i ribarstvo",
-    "",
-    "",
-    "Agriculture, forestry and fishing",
-    "4.45",
-    "4.11",
-    "4.58"
-   ],
-   [
-    "",
-    "01",
-    "Biljna i stočarska proizvodnja, lovstvo i uslužne djelatnost",
-    "",
-    "Crop and animal production, hunting and related service acti",
-    "4.15",
-    "3.88",
-    "4.28"
-   ],
-   [
-    "",
-    "02",
-    "Šumarstvo i sječa drva",
-    "",
-    "Forestry and logging",
-    "4.87",
-    "4.64",
-    "4.92"
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.31. NOVO-NEW": [
-   [
-    "9.3.31.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNA MJESEČNA BRUTO PLAĆA PO PLAĆENOM SATU U PRAVNIM OS",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY GROSS EARNINGS PER PAID HOUR IN LEGAL ENTITI",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "kune/ Kuna",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "Ø 2020. ukupno Total",
-    "Ø 2020. žene Women",
-    "Ø 2020. muškarci Men"
-   ],
-   [
-    "Ukupno",
-    "",
-    "",
-    "",
-    "Total",
-    "6.92",
-    "6.67",
-    "7.14"
-   ],
-   [
-    "A ",
-    "Poljoprivreda, šumarstvo i ribarstvo",
-    "",
-    "",
-    "Agriculture, forestry and fishing",
-    "5.86",
-    "5.4",
-    "6.02"
-   ],
-   [
-    "",
-    "01",
-    "Biljna i stočarska proizvodnja, lovstvo i uslužne djelatnost",
-    "",
-    "Crop and animal production, hunting and related service acti",
-    "5.38",
-    "5.01",
-    "5.56"
-   ],
-   [
-    "",
-    "02",
-    "Šumarstvo i sječa drva",
-    "",
-    "Forestry and logging",
-    "6.48",
-    "6.28",
-    "6.53"
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "9.3.32. NOVO-NEW": [
-   [
-    "9.3.32.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČAN BROJ PLAĆENIH SATI RADA U PRAVNIM OSOBAMA PREMA NK",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE NUMBER OF PAID HOURS IN LEGAL ENTITIES, ACCORDING TO",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "Ø 2020. ukupno Total",
-    "Ø 2020. žene Women",
-    "Ø 2020. muškarci Men"
-   ],
-   [
-    "Ukupno",
-    "",
-    "",
-    "",
-    "Total",
-    "173.0",
-    "172.0",
-    "174.0"
-   ],
-   [
-    "A ",
-    "Poljoprivreda, šumarstvo i ribarstvo",
-    "",
-    "",
-    "Agriculture, forestry and fishing",
-    "174.0",
-    "174.0",
-    "174.0"
-   ],
-   [
-    "",
-    "01",
-    "Biljna i stočarska proizvodnja, lovstvo i uslužne djelatnost",
-    "",
-    "Crop and animal production, hunting and related service acti",
-    "173.0",
-    "173.0",
-    "174.0"
-   ],
-   [
-    "",
-    "02",
-    "Šumarstvo i sječa drva",
-    "",
-    "Forestry and logging",
-    "175.0",
-    "174.0",
-    "175.0"
-   ],
-   [
-    "",
-    "03",
-    "Ribarstvo",
-    "",
-    "Fishing and aquaculture",
-    "176.0",
-    "179.0",
-    "175.0"
-   ],
-   [
-    "B",
-    "Rudarstvo i vađenje",
-    "",
-    "",
-    "Mining and quarrying",
-    "176.0",
-    "172.0",
-    "176.0"
-   ],
-   [
-    "",
-    "99.0",
-    "Djelatnosti izvanteritorijalnih organizacija i tijela",
-    "",
-    "Activities of extraterritorial organisations and bodies",
-    "-",
-    "-",
-    "-"
-   ]
-  ],
-  "Metodol obja-Notes on methodolo": [
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "METODOLOŠKA OBJAŠNJENJA",
-    "",
-    "NOTES ON METHODOLOGY",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Uvođenje eura",
-    "",
-    "Introduction of the euro",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Prema članku 74. Zakona o uvođenju eura kao službene valute ",
-    "",
-    "Pursuant to Article 74 of the Act on the Introduction of the",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Plaće",
-    "",
-    "Wages",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Do 2016. podaci o prosječnim mjesečnim isplaćenim neto i bru",
-    "",
-    "Until 2016, data on average monthly paid off net and gross e",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "– premije dopunskoga i dodatnoga zdravstvenog osiguranja – u",
-    "",
-    "– premiums of supplemental and additional health inisurance ",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ]
-  ],
-  "Ispravci-Corrections": [
-   [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "ISPRAVCI",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "CORRECTIONS",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "9.3.21.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "PROSJEČNI MJESEČNI NEOPOREZIVI PRIMICI PO BROJU PRIMATELJA U",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "AVERAGE MONTHLY NON-TAXABLE INCOMES, BY NUMBER OF RECEIVERS ",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Molimo korisnike da pri korištenju podataka navedu izvor.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Users are kindly requested to state the source.",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "euro/ Euro",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "",
-    "",
-    "XII. 2025. ",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Datum ispravljanja 23. veljače 2026.",
-    "",
-    "",
-    "TREBA PISATI / IT SHOULD BE WRITTEN",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "Date of correcting 23 February 2026",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-   ],
-   [
-    "",
-    "30.09.2015.",
-    "2.10.2015.",
-    "9.3.5.",
-    "EB 28",
-    "",
-    "5721.0",
-    ""
-   ]
-  ]
+ "place_odbacene": [],
+ "kontrola_prema_priopcenjima": {
+  "2025-08": {
+   "priopcenje": 1446,
+   "skripta": 1446.0
+  },
+  "2025-12": {
+   "priopcenje": 1494,
+   "skripta": 1494.0
+  },
+  "2026-01": {
+   "priopcenje": 1511,
+   "skripta": 1511.0
+  },
+  "2026-04": {
+   "priopcenje": 1552,
+   "skripta": 1552.0
+  },
+  "2026-08": {
+   "priopcenje": 1543,
+   "skripta": 1543.0
+  }
  },
- "xlsx_listovi": {
-  "Sadrzaj-Contents": [
-   0,
-   null,
-   null
-  ],
-  "Kratice-Abbreviations": [
-   0,
-   null,
-   null
-  ],
-  "9.3.1.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.2.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.3.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.4.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.5.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.6.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.7.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.8.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.9.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.10.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.11.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.12.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.13.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.14.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.15.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.16.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.17.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.18.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.19.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.20.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.21.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.22.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.23": [
-   0,
-   null,
-   null
-  ],
-  "9.3.24.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.25.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.26.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.27.": [
-   0,
-   null,
-   null
-  ],
-  "9.3.28. NOVO-NEW": [
-   0,
-   null,
-   null
-  ],
-  "9.3.29. NOVO-NEW": [
-   0,
-   null,
-   null
-  ],
-  "9.3.30. NOVO-NEW": [
-   0,
-   null,
-   null
-  ],
-  "9.3.31. NOVO-NEW": [
-   0,
-   null,
-   null
-  ],
-  "9.3.32. NOVO-NEW": [
-   0,
-   null,
-   null
-  ],
-  "Metodol obja-Notes on methodolo": [
-   0,
-   null,
-   null
-  ],
-  "Ispravci-Corrections": [
-   0,
-   null,
-   null
-  ]
- },
- "vrijeme": "2026-11-17T20:18:48+00:00"
+ "greske_pretrage": [
+  "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2: HTTP Error 429: ",
+  "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 1 (arhiva): HTTP Error 429: "
+ ],
+ "ipc_katalog": [
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS14.px",
+   "naziv": "Tabela 1.4 Indeksi cijena stambenih objekata, po tromjesečjima",
+   "azurirano": "2026-09-30T09:04:42"
+  },
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS15.px",
+   "naziv": "Tabela 1.5 Indeksi cijena stambenih objekata, po godinama",
+   "azurirano": "2026-09-30T09:04:42"
+  },
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS16.px",
+   "naziv": "Tabela 1.6 Broj prodanih stambenih objekata, po tromjesečjima",
+   "azurirano": "2026-09-29T11:50:51"
+  },
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS17.px",
+   "naziv": "Tabela 1.7 Broj prodanih stambenih objekata, po godinama",
+   "azurirano": "2026-07-02T08:38:03"
+  },
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS18.px",
+   "naziv": "Tabela 1.8 Vrijednost prodanih stambenih objekata, po tromjesečjima",
+   "azurirano": "2026-09-29T11:50:51"
+  },
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS19.px",
+   "naziv": "Tabela 1.9 Vrijednost prodanih stambenih objekata, po godinama",
+   "azurirano": "2026-07-01T15:51:47"
+  }
+ ],
+ "ipc_odbacene": [],
+ "vrijeme": "2026-11-17T21:07:40+00:00"
 }

@@ -1,8 +1,8 @@
 {
- "azurirano": "2026-11-17T20:18:48+00:00",
- "uspjelo": 10,
+ "azurirano": "2026-11-17T21:07:40+00:00",
+ "uspjelo": 11,
  "zastarjelo": 0,
- "palo": 1,
+ "palo": 0,
  "pokazatelji": [
   {
    "id": "ind_proizvodnja",
@@ -86,8 +86,14 @@
   },
   {
    "id": "neto_placa",
-   "status": "greska",
-   "poruka": "PxWeb: Zaposlenost i place: nijedna tablica nije prosla provjeru: 1 PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA NKD-u 2025. _ OBRADA PREMA JOPPD OBRASCU (vrijeme nije mjesecno (npr. ['2025.', '2026.'])); 8. DISTRIBUCIJA NETO I BRUTO PLAĆA PO PERCENTILIMA I MJESECIMA, OBRADA PREMA OBRASCU JOPPD (vrijeme nije mjesecno (npr. ['2025.', '2026.'])) | Statistika u nizu: place.xlsx: u place.xlsx nije pronaden mjesecni niz neto place"
+   "status": "ok",
+   "zadnje_razdoblje": "2026-08",
+   "kasni_mjeseci": 3,
+   "izvor": "PxWeb: Zaposlenost i place + Statistika u nizu: place.xlsx",
+   "stopa": "izracunato",
+   "preskoceni_izvori": [
+    "deflator indeks potrošačkih cijena (DZS): IPC nije pronaden (0 kandidata odbaceno)"
+   ]
   }
  ]
 }
