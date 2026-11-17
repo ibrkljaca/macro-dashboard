@@ -1,8 +1,8 @@
 {
- "azurirano": "2026-11-17T13:58:06+00:00",
+ "azurirano": "2026-11-17T20:12:42+00:00",
  "uspjelo": 10,
  "zastarjelo": 0,
- "palo": 0,
+ "palo": 1,
  "pokazatelji": [
   {
    "id": "ind_proizvodnja",
@@ -83,6 +83,11 @@
    "kasni_mjeseci": 2,
    "izvor": "M.HR.B.A2C.A.R.A.2250.EUR.N",
    "stopa": "izracunato"
+  },
+  {
+   "id": "neto_placa",
+   "status": "greska",
+   "poruka": "PxWeb: Zaposlenost i place: u bazi nije pronadena tablica s neto placom (0 tablica pregledano) | Statistika u nizu: place.xlsx: u place.xlsx nije pronaden mjesecni niz neto place"
   }
  ]
 }
