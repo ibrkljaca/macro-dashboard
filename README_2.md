@@ -1,6 +1,6 @@
 # Macro Dashboard — Hrvatska
 
-Interaktivni prikaz devet makroekonomskih pokazatelja za Hrvatsku, koji se
+Interaktivni prikaz deset makroekonomskih pokazatelja za Hrvatsku, koji se
 sam ažurira svaki dan iz službenih izvora.
 
 ## Što se ovdje nalazi
@@ -27,6 +27,7 @@ macro-dashboard/
 | Inflacija u europodručju | Eurostat | `prc_hicp_manr` |
 | Ekonomski sentiment (ESI) | Eurostat (DG ECFIN) | `ei_bssi_m_r2` |
 | Kamate na stambene kredite | ECB | `MIR` |
+| Neto plaća | DZS | PxWeb baza „Zaposlenost i plaće” (rezerva: `place.xlsx`) |
 
 Svi podaci počinju od siječnja 2015.
 
@@ -39,6 +40,15 @@ bodova, pa u tekst ide službena brojka — ona koju navode Eurostat i DZS.
 
 Gdje službene stope nema, skripta je računa sama i to bilježi u
 `data/meta.json` pod `stopa`.
+
+### Neto plaća (DZS)
+
+DZS nema stalne šifre tablica kao Eurostat, pa skripta svaki put sama pronađe
+tablicu s prosječnom mjesečnom isplaćenom neto plaćom u PC-Axis bazi, provjeri
+je i spoji nizove (npr. tablicu po NKD-u 2007. i onu po NKD-u 2025.). Iznosi
+prije 2023. preračunavaju se iz kuna po tečaju 7,53450. Realna stopa računa se
+DZS-ovim indeksom potrošačkih cijena; ako on nije dostupan, HICP-om, i to piše
+na kartici. Sve što je skripta pronašla zapisuje se u `data/dzs_dijagnostika.json`.
 
 ## Kako se ažurira
 

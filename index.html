@@ -138,7 +138,7 @@
 <body>
 <div class="omot">
   <h1>Hrvatska: makroekonomski pregled</h1>
-  <p class="podnaslov-stranice">Devet pokazatelja, ažurirano svaki dan iz Eurostata i ECB-a</p>
+  <p class="podnaslov-stranice">Deset pokazatelja, ažurirano svaki dan iz Eurostata, ECB-a i DZS-a</p>
 
   <div class="alatna" id="alatna" role="group" aria-label="Razdoblje prikaza">
     <button data-mjeseci="12">1G</button>
@@ -160,6 +160,9 @@
 // Svaka kartica je jedan blok. "polje" bira koju seriju iz datoteke crtamo:
 //   "razine"    - vrijednost kakva je objavljena (indeks, postotak, mio EUR)
 //   "god_stope" - godisnja stopa promjene koju je skripta izracunala
+//   "realne_god_stope" - realna godisnja stopa (samo neto placa)
+// Neobavezno: "brojka" bira sto se ispisuje kao velika brojka u kutu
+// (ako je nema, to je zadnja vrijednost prve serije).
 // ===========================================================================
 
 const PLAVA  = '#16609C';
@@ -203,6 +206,12 @@ const KARTICE = [
   { naslov:'Kamate na stambene kredite', opis:'Nove kredite kućanstvima, prosjek',
     jedinica:'%', decimala:2,
     serije:[{datoteka:'stambeni_krediti', polje:'razine', naziv:'Kamatna stopa', boja:PLAVA}] },
+
+  { naslov:'Neto plaća', opis:'Godišnja stopa promjene, nominalno i realno',
+    jedinica:'%', decimala:1,
+    brojka:{datoteka:'neto_placa', polje:'razine', jedinica:'€', decimala:0},
+    serije:[{datoteka:'neto_placa', polje:'god_stope',        naziv:'Nominalno', boja:PLAVA},
+            {datoteka:'neto_placa', polje:'realne_god_stope', naziv:'Realno',    boja:CRVENA}] },
 ];
 
 // ===========================================================================
@@ -352,15 +361,22 @@ function nacrtaj(kartica, podaci, mjeseci, idx){
 // SASTAVLJANJE KARTICE
 // ===========================================================================
 
+// Opis ispod naslova. Kod neto plaće dopisuje se kojim je deflatorom
+// izračunata realna stopa (DZS-ov IPC, ili HICP ako IPC nije bio dostupan).
+function opisKartice(kartica, podaci){
+  const d = podaci[kartica.serije[0].datoteka].deflator;
+  if (!d) return kartica.opis;
+  return kartica.opis + ' (deflator: ' + (d.includes('HICP') ? 'HICP' : 'IPC') + ')';
+}
+
 function slozi(kartica, podaci, mjeseci, idx){
-  const glavna = podaci[kartica.serije[0].datoteka];
-  const jeStopa = kartica.serije[0].polje === 'god_stope';
-  const zadnja = jeStopa
-      ? glavna.god_stope[glavna.god_stope.length-1]
-      : glavna.razine[glavna.razine.length-1];
+  // velika brojka: zadana "brojka" ili zadnja vrijednost prve serije
+  const izvorBrojke = kartica.brojka || {datoteka:kartica.serije[0].datoteka,
+      polje:kartica.serije[0].polje, jedinica:kartica.jedinica, decimala:kartica.decimala};
+  const niz = podaci[izvorBrojke.datoteka][izvorBrojke.polje];
+  const zadnja = niz[niz.length-1];
 
   // promjena u odnosu na prethodni mjesec
-  const niz = jeStopa ? glavna.god_stope : glavna.razine;
   const prije = niz.length > 1 ? niz[niz.length-2].v : null;
   const delta = prije === null ? null : zadnja.v - prije;
 
@@ -369,8 +385,8 @@ function slozi(kartica, podaci, mjeseci, idx){
     razred = delta > 0.0001 ? 'gore' : (delta < -0.0001 ? 'dolje' : 'ravno');
     strelica = delta > 0.0001 ? '▲' : (delta < -0.0001 ? '▼' : '■');
     // promjena postotne stope mjeri se u postotnim bodovima, ne u postocima
-    const mjera = kartica.jedinica === '%' ? ' p.b.' : (kartica.jedinica ? ' ' + kartica.jedinica : '');
-    tekstDelta = strelica + ' ' + broj(Math.abs(delta), kartica.decimala) + mjera;
+    const mjera = izvorBrojke.jedinica === '%' ? ' p.b.' : (izvorBrojke.jedinica ? ' ' + izvorBrojke.jedinica : '');
+    tekstDelta = strelica + ' ' + broj(Math.abs(delta), izvorBrojke.decimala) + mjera;
   }
 
   const izvori = [...new Set(kartica.serije.map(s => podaci[s.datoteka].izvor))].join(', ');
@@ -397,10 +413,10 @@ function slozi(kartica, podaci, mjeseci, idx){
       <div class="zaglavlje">
         <div>
           <h2 class="naslov">${kartica.naslov}</h2>
-          <p class="opis">${kartica.opis}</p>
+          <p class="opis">${opisKartice(kartica, podaci)}</p>
         </div>
         <div>
-          <div class="brojka">${sMjerom(zadnja.v, kartica.jedinica, kartica.decimala)}</div>
+          <div class="brojka">${sMjerom(zadnja.v, izvorBrojke.jedinica, izvorBrojke.decimala)}</div>
           <div class="promjena ${razred}">${tekstDelta}</div>
         </div>
       </div>
@@ -507,18 +523,31 @@ function ozivi(element, kartica, podaci, mjeseci, idx){
 
 let PODACI = {}, META = null, MJESECI_PRIKAZA = 0;
 
+let VIDLJIVE = KARTICE;
+
 function iscrtajSve(){
   const mreza = document.getElementById('mreza');
-  mreza.innerHTML = KARTICE.map((k,i) => slozi(k, PODACI, MJESECI_PRIKAZA, i)).join('');
-  [...mreza.children].forEach((el,i) => ozivi(el, KARTICE[i], PODACI, MJESECI_PRIKAZA, i));
+  mreza.innerHTML = VIDLJIVE.map((k,i) => slozi(k, PODACI, MJESECI_PRIKAZA, i)).join('');
+  [...mreza.children].forEach((el,i) => ozivi(el, VIDLJIVE[i], PODACI, MJESECI_PRIKAZA, i));
+}
+
+// Kartica se prikazuje samo ako za nju postoje podaci; serija bez podataka
+// (npr. realna stopa kad deflator nije dostupan) se izostavlja.
+function pripremiKartice(){
+  VIDLJIVE = KARTICE.map(k => ({...k, serije:k.serije.filter(s =>
+      PODACI[s.datoteka] && (PODACI[s.datoteka][s.polje] || []).length)}))
+    .filter(k => k.serije.length &&
+      (!k.brojka || (PODACI[k.brojka.datoteka] && (PODACI[k.brojka.datoteka][k.brojka.polje] || []).length)));
 }
 
 async function start(){
   try{
     META = await ucitajJSON('data/meta.json');
     const imena = [...new Set(KARTICE.flatMap(k => k.serije.map(s => s.datoteka)))];
-    const ucitane = await Promise.all(imena.map(i => ucitajJSON('data/' + i + '.json')));
-    imena.forEach((ime,i) => PODACI[ime] = ucitane[i]);
+    // datoteka koja (još) ne postoji ne ruši stranicu - samo se njezina kartica ne prikaže
+    const ucitane = await Promise.allSettled(imena.map(i => ucitajJSON('data/' + i + '.json')));
+    imena.forEach((ime,i) => { if (ucitane[i].status === 'fulfilled') PODACI[ime] = ucitane[i].value; });
+    if (!Object.keys(PODACI).length) throw new Error('nijedna datoteka s podacima nije dostupna');
   } catch(greska){
     document.getElementById('mreza').innerHTML =
       '<p class="ucitavanje">Podaci trenutačno nisu dostupni.<br><small>' + greska.message + '</small></p>';
@@ -535,6 +564,7 @@ async function start(){
       '). Prikazane su zadnje dostupne vrijednosti.</div>';
   }
 
+  pripremiKartice();
   iscrtajSve();
 
   const d = new Date(META.azurirano);
@@ -542,7 +572,7 @@ async function start(){
   document.getElementById('podnozje').innerHTML =
     'Zadnje ažuriranje: ' + datum + ' u ' +
     d.toLocaleTimeString('hr-HR',{hour:'2-digit',minute:'2-digit'}) + '<br>' +
-    'Podaci: Eurostat i Europska središnja banka &nbsp;|&nbsp; Obrada: I. Brkljača';
+    'Podaci: Eurostat, Europska središnja banka i Državni zavod za statistiku &nbsp;|&nbsp; Obrada: I. Brkljača';
 }
 
 document.getElementById('alatna').addEventListener('click', e => {
