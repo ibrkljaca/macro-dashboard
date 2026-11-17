@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-17T20:12:42+00:00",
+ "azurirano": "2026-11-17T20:18:48+00:00",
  "uspjelo": 10,
  "zastarjelo": 0,
  "palo": 1,
@@ -87,7 +87,7 @@
   {
    "id": "neto_placa",
    "status": "greska",
-   "poruka": "PxWeb: Zaposlenost i place: u bazi nije pronadena tablica s neto placom (0 tablica pregledano) | Statistika u nizu: place.xlsx: u place.xlsx nije pronaden mjesecni niz neto place"
+   "poruka": "PxWeb: Zaposlenost i place: nijedna tablica nije prosla provjeru: 1 PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA NKD-u 2025. _ OBRADA PREMA JOPPD OBRASCU (vrijeme nije mjesecno (npr. ['2025.', '2026.'])); 8. DISTRIBUCIJA NETO I BRUTO PLAĆA PO PERCENTILIMA I MJESECIMA, OBRADA PREMA OBRASCU JOPPD (vrijeme nije mjesecno (npr. ['2025.', '2026.'])) | Statistika u nizu: place.xlsx: u place.xlsx nije pronaden mjesecni niz neto place"
   }
  ]
 }
