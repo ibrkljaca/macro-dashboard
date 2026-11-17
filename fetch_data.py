@@ -214,11 +214,13 @@ POKAZATELJI = [
                      "u pravnim osobama, euro",
         "jedinica": "eur",
         "prikaz": "razina",
+        "spoji_izvore": True,
         # DZS nema API kao Eurostat s fiksnim siframa tablica. Skripta zato
         # sama pronade tablicu u DZS-ovoj PC-Axis (PxWeb) bazi, u mapi
-        # "Zaposlenost i place". Rezerva je datoteka "Statistika u nizu"
-        # (place.xlsx) sa stalnom adresom. Sve sto je skripta vidjela zapisuje
-        # se u data/dzs_dijagnostika.json - tamo se gleda ako nesto pukne.
+        # "Zaposlenost i place" - ondje su podaci tek od 2025. Dugu povijest
+        # daje datoteka "Statistika u nizu" (place.xlsx) sa stalnom adresom.
+        # Oba se izvora spajaju; za mjesece koje imaju oba vrijedi PxWeb.
+        # Sve sto je skripta vidjela zapisuje se u data/dzs_dijagnostika.json.
         # Iznosi prije 2023. preracunavaju se iz kuna po tecaju 7,53450.
         "izvori": [
             {"api": "dzs_pxweb_place", "oznaka": "DZS",
@@ -372,6 +374,9 @@ DZS_PXWEB = "https://web.dzs.hr/PXWeb/api/v1/hr"
 DZS_PLACE_XLSX = "https://podaci.dzs.hr/media/yegdgb5v/place.xlsx"
 TECAJ_HRK = 7.53450
 DZS_DIJAGNOSTIKA = {}
+# Neto place iz DZS-ovih priopcenja (euro) - samo za provjeru u dijagnostici
+KONTROLNE_TOCKE = {"2025-08": 1446, "2025-12": 1494, "2026-01": 1511,
+                   "2026-04": 1552, "2026-08": 1543}
 
 MJESECI_IMENA = [("sije", 1), ("velj", 2), ("ožuj", 3), ("ozuj", 3), ("trav", 4),
                  ("svib", 5), ("lip", 6), ("srp", 7), ("kolov", 8), ("ruj", 9),
@@ -525,23 +530,61 @@ def odaberi_ukupno(tekstovi, kodovi):
     return None
 
 
+def mjesec_broj(tekst):
+    """Broj mjeseca iz oznake koja sadrzi SAMO mjesec: 'sijecanj', 'I.', '01', 'M01'."""
+    t = mali(str(tekst)).split("/")[0].strip(" .")   # dvojezicno: "I./ Jan."
+    if not t:
+        return None
+    m = re.fullmatch(r"m?0?(\d{1,2})", t)
+    if m and 1 <= int(m.group(1)) <= 12:
+        return int(m.group(1))
+    rim = re.fullmatch(r"(xii|xi|ix|x|viii|vii|vi|iv|v|iii|ii|i)", t)
+    if rim:
+        return RIMSKI[rim.group(1).upper()]
+    if not re.search(r"\d", t):
+        for korijen, broj_mj in MJESECI_IMENA:
+            if t.startswith(korijen):
+                return broj_mj
+    return None
+
+
+def godina_iz(tekst):
+    m = re.search(r"\b((19|20)\d{2})\b", str(tekst))
+    return int(m.group(1)) if m else None
+
+
 def pxweb_niz(tablica, odabir_pokazatelja):
     """Za jednu tablicu: procitaj opis, za svaku varijablu osim vremena izaberi
     jednu vrijednost (ukupno / trazeni pokazatelj), pa skini cijeli niz.
+    Vrijeme moze biti jedna varijabla (2026M01) ili dvije (Godina + Mjesec).
     Vrati (tocke, opis_odabira) ili digne gresku s razlogom."""
     meta = pxweb(tablica["putanja"])
     varijable = meta.get("variables", [])
+    DZS_DIJAGNOSTIKA.setdefault("tablice_varijable", {})[tablica["putanja"]] = [
+        {"code": v.get("code"), "text": v.get("text"), "time": v.get("time"),
+         "broj": len(v.get("values", [])), "vrijednosti": (v.get("valueTexts") or [])[:15]}
+        for v in varijable]
     vrijeme = pxweb_vrijeme(varijable)
     if vrijeme is None:
-        raise ValueError("nema mjesecne vremenske varijable")
+        raise ValueError("nema vremenske varijable")
     mjesecnih = sum(1 for k, t in zip(vrijeme["values"], vrijeme.get("valueTexts", vrijeme["values"]))
                     if u_mjesec(k, t))
+    mjesec_var = None
     if mjesecnih < 6:
-        raise ValueError("vrijeme nije mjesecno (npr. {})".format(vrijeme["valueTexts"][:3]))
+        # Godina i mjesec u odvojenim varijablama (npr. "2025." i "sijecanj")
+        for v in varijable:
+            if v is vrijeme:
+                continue
+            tekstovi = v.get("valueTexts", v["values"])
+            if sum(1 for t in tekstovi if mjesec_broj(t)) >= 12:
+                mjesec_var = v
+                break
+        if mjesec_var is None:
+            raise ValueError("vrijeme nije mjesecno (npr. {})".format(vrijeme["valueTexts"][:3]))
 
     upit, odabrano = [], {}
     for v in varijable:
-        if v is vrijeme:
+        if v is vrijeme or v is mjesec_var:
             continue
         kodovi, tekstovi = v["values"], v.get("valueTexts", v["values"])
         if len(kodovi) == 1:
@@ -556,24 +599,31 @@ def pxweb_niz(tablica, odabir_pokazatelja):
         odabrano[v.get("text") or v["code"]] = tekstovi[i]
         upit.append({"code": v["code"], "selection": {"filter": "item", "values": [kodovi[i]]}})
     upit.append({"code": vrijeme["code"], "selection": {"filter": "all", "values": ["*"]}})
+    if mjesec_var is not None:
+        samo_mjeseci = [k for k, t in zip(mjesec_var["values"],
+                                          mjesec_var.get("valueTexts", mjesec_var["values"]))
+                        if mjesec_broj(t)]
+        upit.append({"code": mjesec_var["code"],
+                     "selection": {"filter": "item", "values": samo_mjeseci}})
 
     js = pxweb(tablica["putanja"], {"query": upit, "response": {"format": "json-stat2"}})
-    return jsonstat2_niz(js, vrijeme["code"]), {"naslov": meta.get("title"), "odabrano": odabrano}
+    tocke = jsonstat2_niz(js, vrijeme["code"], mjesec_var["code"] if mjesec_var else None)
+    return tocke, {"naslov": meta.get("title"), "odabrano": odabrano}
 
 
-def jsonstat2_niz(js, kod_vremena):
-    """Raspetljaj JSON-stat2 odgovor (sve dimenzije osim vremena imaju 1 clan)."""
+def jsonstat2_niz(js, kod_vremena, kod_mjeseca=None):
+    """Raspetljaj JSON-stat2 odgovor. Sve dimenzije osim vremena (i mjeseca,
+    ako je zasebna) imaju po jedan clan."""
     ids, velicine = js["id"], js["size"]
-    i_vr = ids.index(kod_vremena)
-    kategorija = js["dimension"][kod_vremena]["category"]
-    indeks = kategorija.get("index")
-    if isinstance(indeks, list):
-        indeks = {k: i for i, k in enumerate(indeks)}
-    oznake = kategorija.get("label", {})
-    po_poziciji = {p: k for k, p in indeks.items()}
-    korak = 1
-    for v in velicine[i_vr + 1:]:
-        korak *= v
+    dimenzije = []
+    for kod in ids:
+        kategorija = js["dimension"][kod]["category"]
+        indeks = kategorija.get("index")
+        if isinstance(indeks, list):
+            indeks = {k: i for i, k in enumerate(indeks)}
+        if indeks is None:
+            indeks = {k: 0 for k in kategorija.get("label", {})}
+        dimenzije.append(({p: k for k, p in indeks.items()}, kategorija.get("label", {})))
     vrijednosti = js.get("value", [])
     if isinstance(vrijednosti, dict):
         stavke = [(int(k), v) for k, v in vrijednosti.items()]
@@ -583,10 +633,26 @@ def jsonstat2_niz(js, kod_vremena):
     for ravni, v in stavke:
         if v is None:
             continue
-        kod = po_poziciji.get((ravni // korak) % velicine[i_vr])
-        t = u_mjesec(kod, oznake.get(kod))
+        koordinate, ostatak = {}, ravni
+        for i in range(len(ids) - 1, -1, -1):
+            poz = ostatak % velicine[i]
+            ostatak //= velicine[i]
+            kod = dimenzije[i][0].get(poz)
+            koordinate[ids[i]] = (kod, dimenzije[i][1].get(kod, kod))
+        kod_v, oznaka_v = koordinate[kod_vremena]
+        if kod_mjeseca:
+            godina = godina_iz(oznaka_v) or godina_iz(kod_v)
+            kod_m, oznaka_m = koordinate[kod_mjeseca]
+            mj = mjesec_broj(oznaka_m) or mjesec_broj(kod_m)
+            t = "{}-{:02d}".format(godina, mj) if godina and mj else None
+        else:
+            t = u_mjesec(kod_v, oznaka_v)
+        try:
+            broj_v = float(v)
+        except (TypeError, ValueError):
+            continue
         if t:
-            tocke.append((t, float(v)))
+            tocke.append((t, broj_v))
     tocke.sort()
     return tocke
 
@@ -595,7 +661,8 @@ def jsonstat2_niz(js, kod_vremena):
 
 LOSE_ZA_PLACU = ("satu", " sat", "spol", "županij", "zupanij", "obrazov", "decil",
                  "kvartil", "medijal", "obračunsk", "obracunsk", "zanimanj", "dob",
-                 "godišnj", "godisnj", "tromjeseč", "tromjesec")
+                 "godišnj", "godisnj", "tromjeseč", "tromjesec", "razdoblj",
+                 "percentil", "distribuc", "neoporeziv")
 
 
 def ocjena_tablice_place(naziv):
@@ -814,20 +881,88 @@ def xlsx_neto_niz(celije):
     return najbolji
 
 
+def je_ukupno(v):
+    return isinstance(v, str) and (mali(v).strip(" .").startswith("ukupno")
+                                   or mali(v).strip(" .") == "total")
+
+
+def xlsx_vodoravni_niz(celije):
+    """Tablice u kojima su razdoblja u stupcima, a djelatnosti u retcima:
+    cita redak 'Ukupno'. Zaglavlje moze biti 'I. 2024.' u jednoj celiji ili
+    godina u jednom retku (samo iznad prvog mjeseca) i mjeseci u drugom."""
+    najveci_stupac = max((st for _, st in celije), default=0)
+    retci_ukupno = sorted({r for (r, st), v in celije.items() if st <= 3 and je_ukupno(v)})
+    najbolji = []
+    for R in retci_ukupno:
+        zaglavlje = list(range(max(1, R - 10), R))
+        # godina se "nosi" udesno unutar retka zaglavlja
+        nosena = {}
+        for h in zaglavlje:
+            g = None
+            for st in range(1, najveci_stupac + 1):
+                v = celije.get((h, st))
+                if isinstance(v, float) and 1990 <= v <= 2100 and v == int(v):
+                    g = int(v)
+                elif isinstance(v, str) and re.fullmatch(r"\s*((19|20)\d{2})\.?\s*", v.split("/")[0]):
+                    g = int(v.split("/")[0].strip(" ."))
+                elif isinstance(v, str) and godina_iz(v) and not u_mjesec(v):
+                    g = None                      # npr. "Ø 2024." - godisnji prosjek
+                nosena[(h, st)] = g
+        tocke = []
+        for st in range(2, najveci_stupac + 1):
+            vrijednost = celije.get((R, st))
+            if not isinstance(vrijednost, float):
+                continue
+            stupac_teksta = [celije.get((h, st)) for h in reversed(zaglavlje)]
+            if any(isinstance(x, str) and ("ø" in mali(x) or "prosjek" in mali(x))
+                   for x in stupac_teksta):
+                continue
+            razdoblje = None
+            for x in stupac_teksta:
+                if isinstance(x, str) and u_mjesec(x):
+                    razdoblje = u_mjesec(x)
+                    break
+            if razdoblje is None:
+                mj = next((mjesec_broj(x) for x in stupac_teksta
+                           if isinstance(x, str) and mjesec_broj(x)), None)
+                g = next((nosena.get((h, st)) for h in reversed(zaglavlje)
+                          if nosena.get((h, st))), None)
+                if mj and g:
+                    razdoblje = "{}-{:02d}".format(g, mj)
+            if razdoblje:
+                tocke.append((razdoblje, vrijednost))
+        tocke = sorted(dict(tocke).items())
+        if len(tocke) > len(najbolji):
+            najbolji = tocke
+    return najbolji
+
+
+def naslov_lista(celije):
+    return " ".join(str(celije.get((r, st), "")) for r in range(1, 6) for st in range(1, 4))
+
+
 def dzs_xlsx_place():
     listovi = xlsx_listovi(dohvati_bajtove(DZS_PLACE_XLSX))
-    # za popravke: prvih 12 redaka i 8 stupaca svakog lista te zadnji redak
-    pregled = {}
+    pregled, nizovi, sazetak = {}, [], {}
     for ime, celije in listovi.items():
-        zadnji = max((r for r, _ in celije), default=0)
-        retci = list(range(1, 13)) + [zadnji]
-        pregled[ime] = [[str(celije.get((r, st), ""))[:60] for st in range(1, 9)] for r in retci]
+        naslov = mali(naslov_lista(celije))
+        # samo listovi s prosjecnom neto placom (ne bruto, ne po satu)
+        if "neto" not in naslov or any(x in naslov for x in ("bruto", "satu", "sat ", "medijal")):
+            continue
+        zadnji_stupac = max((st for _, st in celije), default=0)
+        R = next((r for (r, st), v in sorted(celije.items()) if st <= 3 and je_ukupno(v)), None)
+        if R:
+            stupci = list(range(1, 7)) + list(range(max(7, zadnji_stupac - 3), zadnji_stupac + 1))
+            pregled[ime] = [[str(celije.get((r, st), ""))[:40] for st in stupci]
+                            for r in range(max(1, R - 8), R + 1)]
+        okomiti = xlsx_neto_niz(celije)
+        vodoravni = xlsx_vodoravni_niz(celije)
+        niz = vodoravni if len(vodoravni) >= len(okomiti) else okomiti
+        sazetak[ime] = (len(niz), niz[0][0] if niz else None, niz[-1][0] if niz else None)
+        if len(niz) >= 12:
+            nizovi.append(u_eure(niz))
     DZS_DIJAGNOSTIKA["xlsx_pregled"] = pregled
-    nizovi = {ime: xlsx_neto_niz(c) for ime, c in listovi.items()}
-    DZS_DIJAGNOSTIKA["xlsx_listovi"] = {ime: (len(n), n[0][0] if n else None,
-                                              n[-1][0] if n else None)
-                                        for ime, n in nizovi.items()}
-    nizovi = [u_eure(n) for n in nizovi.values() if len(n) >= 24]
+    DZS_DIJAGNOSTIKA["xlsx_listovi"] = sazetak
     if not nizovi:
         raise ValueError("u place.xlsx nije pronaden mjesecni niz neto place")
     return spoji_nizove(nizovi)
@@ -879,9 +1014,34 @@ def prvi_koji_radi(izvori):
     return None, None, greske
 
 
+def spoji_sve_izvore(izvori):
+    """Skine sve izvore koji rade i spoji ih. Izvor ranije na popisu ima
+    prednost za mjesece koje pokrivaju oba (npr. PxWeb od 2025., a
+    place.xlsx daje dugu povijest)."""
+    greske, uspjeli, spojeno = [], [], {}
+    for izvor in reversed(izvori):
+        try:
+            spojeno.update(dict(skini_iz_izvora(izvor)))
+            uspjeli.insert(0, izvor)
+        except Exception as greska:          # noqa: BLE001
+            greske.insert(0, "{}: {}".format(izvor.get("tablica"), greska))
+    if not spojeno:
+        return None, None, greske
+    tocke = sorted(spojeno.items())
+    glavni = dict(uspjeli[0])
+    glavni["tablica"] = " + ".join(i["tablica"] for i in uspjeli)
+    # kontrola prema brojkama iz DZS-ovih priopcenja
+    DZS_DIJAGNOSTIKA["kontrola_prema_priopcenjima"] = {
+        t: {"priopcenje": v, "skripta": spojeno.get(t)} for t, v in KONTROLNE_TOCKE.items()}
+    return tocke, glavni, greske
+
+
 def obradi(pokazatelj):
     """Skine jedan pokazatelj i vrati gotov rjecnik spreman za spremanje."""
-    tocke, upotrijebljeni, greske = prvi_koji_radi(pokazatelj["izvori"])
+    if pokazatelj.get("spoji_izvore"):
+        tocke, upotrijebljeni, greske = spoji_sve_izvore(pokazatelj["izvori"])
+    else:
+        tocke, upotrijebljeni, greske = prvi_koji_radi(pokazatelj["izvori"])
     if tocke is None:
         raise ValueError(" | ".join(greske))
 
