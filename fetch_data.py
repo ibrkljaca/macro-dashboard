@@ -420,6 +420,9 @@ def u_mjesec(*tekstovi):
         m = re.search(r"\b(XII|XI|IX|X|VIII|VII|VI|IV|V|III|II|I)\.?\s*(\d{4})", t)
         if m:
             return "{}-{:02d}".format(int(m.group(2)), RIMSKI[m.group(1)])
+        m = re.search(r"\b(\d{4})\.?\s+(XII|XI|IX|X|VIII|VII|VI|IV|V|III|II|I)\b\.?", t)
+        if m:
+            return "{}-{:02d}".format(int(m.group(1)), RIMSKI[m.group(2)])
         godina = re.search(r"\b(19|20)\d{2}\b", t)
         if godina:
             nizak = mali(t)
@@ -468,13 +471,20 @@ def pxweb_katalog(rijeci_mape, najvise_razina=4, najvise_upita=60):
                 "{}: {}".format(putanja or "/", greska))
             continue
         posjeceno += 1
+        if razina == 0:
+            # korijen vraca popis baza u obliku {"dbid": ..., "text": ...}
+            DZS_DIJAGNOSTIKA["pxweb_korijen"] = stavke[:40]
         for s in stavke:
             naziv = s.get("text", "")
-            nova = (putanja + "/" + s.get("id", "")).strip("/")
-            if s.get("type") == "t":
+            oznaka = s.get("id") or s.get("dbid") or ""
+            vrsta = s.get("type") or ("l" if s.get("dbid") else None)
+            nova = (putanja + "/" + oznaka).strip("/")
+            if razina == 0:
+                naziv = naziv + " " + oznaka
+            if vrsta == "t":
                 tablice.append({"putanja": nova, "naziv": naziv,
                                 "azurirano": s.get("updated")})
-            elif s.get("type") == "l" and razina < najvise_razina:
+            elif vrsta == "l" and razina < najvise_razina:
                 if razina == 0 and not any(r in mali(naziv) for r in rijeci_mape):
                     continue
                 if "arhiv" in mali(naziv) and ("2013" in naziv or "2000" in naziv):
@@ -770,10 +780,12 @@ def xlsx_neto_niz(celije):
         tocke, godina = [], None
         for r in range(r0 + 1, zadnji_redak + 1):
             razdoblje = None
-            for s in range(1, min(s0, 3)):        # razdoblje je u stupcima A i B
+            for s in range(1, s0):
                 v = celije.get((r, s))
                 if v is None:
                     continue
+                if isinstance(v, float) and s > 2:
+                    continue                      # brojke desno od A i B su podaci, ne datumi
                 if isinstance(v, float) and 1990 <= v <= 2100 and v == int(v):
                     godina = int(v)
                 elif isinstance(v, float) and 30000 < v < 60000:
@@ -804,6 +816,13 @@ def xlsx_neto_niz(celije):
 
 def dzs_xlsx_place():
     listovi = xlsx_listovi(dohvati_bajtove(DZS_PLACE_XLSX))
+    # za popravke: prvih 12 redaka i 8 stupaca svakog lista te zadnji redak
+    pregled = {}
+    for ime, celije in listovi.items():
+        zadnji = max((r for r, _ in celije), default=0)
+        retci = list(range(1, 13)) + [zadnji]
+        pregled[ime] = [[str(celije.get((r, st), ""))[:60] for st in range(1, 9)] for r in retci]
+    DZS_DIJAGNOSTIKA["xlsx_pregled"] = pregled
     nizovi = {ime: xlsx_neto_niz(c) for ime, c in listovi.items()}
     DZS_DIJAGNOSTIKA["xlsx_listovi"] = {ime: (len(n), n[0][0] if n else None,
                                               n[-1][0] if n else None)
