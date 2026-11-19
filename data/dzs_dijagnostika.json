@@ -1024,6 +1024,66 @@
      "NETO"
     ]
    }
+  ],
+  "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px": [
+   {
+    "code": "ECOICOP, ver. 2",
+    "text": "ECOICOP, ver. 2",
+    "time": null,
+    "broj": 522,
+    "vrijednosti": [
+     "00  INDEKS POTROŠAČKIH CIJENA – UKUPNO",
+     "01  HRANA I BEZALKOHOLNA PIĆA",
+     "01.1  HRANA",
+     "01.1.1  Žitarice i proizvodi od žitarica",
+     "01.1.1.1  Žitarice",
+     "01.1.1.2  Brašno od žitarica",
+     "01.1.1.3  Kruh i pekarski proizvodi",
+     "01.1.1.3.1  Kruh",
+     "01.1.1.3.9  Ostali pekarski proizvodi",
+     "01.1.1.4  Žitne pahuljice za doručak",
+     "01.1.1.5  Makaroni, rezanci, kuskus i slična tjestenina",
+     "01.1.1.9  Ostale mljevene žitarice i proizvodi od žitarica",
+     "01.1.2  Žive životinje, meso i ostali dijelovi zaklanih kopnenih životinja",
+     "01.1.2.1  Žive kopnene životinje",
+     "01.1.2.2  Meso, svježe, rashlađeno ili smrznuto"
+    ]
+   },
+   {
+    "code": "Indikatori",
+    "text": "Indikatori",
+    "time": null,
+    "broj": 4,
+    "vrijednosti": [
+     "godišnje stope promjene (tekući mjesec/isti mjesec prethodne godine), %",
+     "mjesečne stope promjene (tekući mjesec/prethodni mjesec), %",
+     "dvanaestomjesečne prosječne stope promjene, %",
+     "indeksi (2025. = 100)"
+    ]
+   },
+   {
+    "code": "Mjesec",
+    "text": "Mjesec",
+    "time": true,
+    "broj": 335,
+    "vrijednosti": [
+     "1998M12",
+     "1999M01",
+     "1999M02",
+     "1999M03",
+     "1999M04",
+     "1999M05",
+     "1999M06",
+     "1999M07",
+     "1999M08",
+     "1999M09",
+     "1999M10",
+     "1999M11",
+     "1999M12",
+     "2000M01",
+     "2000M02"
+    ]
+   }
   ]
  },
  "place_upotrijebljene": [
@@ -1063,12 +1123,102 @@
    "skripta": 1543.0
   }
  },
- "greske_pretrage": [
-  "Cijene/Indeksi cijena stambenih objekata: HTTP Error 429: ",
-  "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2: HTTP Error 429: ",
-  "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 1 (arhiva): HTTP Error 429: "
+ "ipc_katalog": [
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS14.px",
+   "naziv": "Tabela 1.4 Indeksi cijena stambenih objekata, po tromjesečjima",
+   "azurirano": "2026-09-30T09:04:42"
+  },
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS15.px",
+   "naziv": "Tabela 1.5 Indeksi cijena stambenih objekata, po godinama",
+   "azurirano": "2026-09-30T09:04:42"
+  },
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS16.px",
+   "naziv": "Tabela 1.6 Broj prodanih stambenih objekata, po tromjesečjima",
+   "azurirano": "2026-09-29T11:50:51"
+  },
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS17.px",
+   "naziv": "Tabela 1.7 Broj prodanih stambenih objekata, po godinama",
+   "azurirano": "2026-07-02T08:38:03"
+  },
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS18.px",
+   "naziv": "Tabela 1.8 Vrijednost prodanih stambenih objekata, po tromjesečjima",
+   "azurirano": "2026-09-29T11:50:51"
+  },
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS19.px",
+   "naziv": "Tabela 1.9 Vrijednost prodanih stambenih objekata, po godinama",
+   "azurirano": "2026-07-01T15:51:47"
+  },
+  {
+   "putanja": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px",
+   "naziv": "Tabela 1.2 Indeksi potrošačkih cijena prema ECOICOP, ver. 2 klasifikaciji, po mjesecima",
+   "azurirano": "2026-11-11T08:03:44"
+  },
+  {
+   "putanja": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS10.px",
+   "naziv": "Tabela 1.3 Indeksi potrošačkih cijena prema ECOICOP, ver. 2 klasifikaciji, po godinama",
+   "azurirano": "2026-10-09T11:46:20"
+  },
+  {
+   "putanja": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS11.px",
+   "naziv": "Tabela 1.4 Harmonizirani indeksi potrošačkih cijena prema ECOICOP, ver. 2 klasifikaciji, po mjesecima",
+   "azurirano": "2026-11-16T11:03:14"
+  },
+  {
+   "putanja": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS12.px",
+   "naziv": "Tabela 1.5 Harmonizirani indeksi potrošačkih cijena prema ECOICOP, ver. 2 klasifikaciji, po godinama",
+   "azurirano": "2026-10-15T11:02:39"
+  },
+  {
+   "putanja": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS13.px",
+   "naziv": "Tabela 1.6 Harmonizirani indeksi potrošačkih cijena po stalnim poreznim stopama (ECOICOP, ver. 2), po mjesecima",
+   "azurirano": "2026-11-11T08:03:44"
+  },
+  {
+   "putanja": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 1 (arhiva)/ME_PS2.px",
+   "naziv": "Tabela 1.2 Indeksi potrošačkih cijena prema ECOICOP, ver. 1 klasifikaciji, po mjesecima",
+   "azurirano": "2026-02-19T15:32:53"
+  },
+  {
+   "putanja": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 1 (arhiva)/ME_PS3.px",
+   "naziv": "Tabela 1.3 Indeksi potrošačkih cijena prema ECOICOP, ver. 1 klasifikaciji, po godinama",
+   "azurirano": "2026-02-19T15:34:31"
+  },
+  {
+   "putanja": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 1 (arhiva)/ME_PS4.px",
+   "naziv": "Tabela 1.4 Harmonizirani indeksi potrošačkih cijena prema ECOICOP, ver. 1 klasifikaciji, po mjesecima",
+   "azurirano": "2026-02-19T15:36:04"
+  },
+  {
+   "putanja": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 1 (arhiva)/ME_PS5.px",
+   "naziv": "Tabela 1.5 Harmonizirani indeksi potrošačkih cijena prema ECOICOP, ver. 1 klasifikaciji, po godinama",
+   "azurirano": "2026-02-19T15:36:46"
+  },
+  {
+   "putanja": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 1 (arhiva)/ME_PS6.px",
+   "naziv": "Tabela 1.6 Harmonizirani indeksi potrošačkih cijena po stalnim poreznim stopama (ECOICOP, ver. 1), po mjesecima",
+   "azurirano": "2026-02-19T15:38:51"
+  }
  ],
- "ipc_katalog": [],
- "ipc_odbacene": [],
- "vrijeme": "2026-11-18T13:34:04+00:00"
+ "ipc_upotrijebljene": [
+  {
+   "putanja": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px",
+   "naziv": "Tabela 1.2 Indeksi potrošačkih cijena prema ECOICOP, ver. 2 klasifikaciji, po mjesecima",
+   "azurirano": "2026-11-11T08:03:44",
+   "naslov": "Tabela 1.2 Indeksi potrošačkih cijena prema ECOICOP, ver. 2 klasifikaciji, po mjesecima",
+   "odabrano": {
+    "ECOICOP, ver. 2": "Ukupno bez energije",
+    "Indikatori": "godišnje stope promjene (tekući mjesec/isti mjesec prethodne godine), %"
+   },
+   "vrsta": "godisnji_indeks",
+   "od": "2015-12",
+   "do": "2026-10"
+  }
+ ],
+ "vrijeme": "2026-11-19T14:00:45+00:00"
 }
