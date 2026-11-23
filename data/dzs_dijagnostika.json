@@ -898,62 +898,62 @@
   {
    "putanja": "Zaposlenost i plaće/Od 2025/T01.px",
    "naziv": "1 PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA NKD-u 2025. _ OBRADA PREMA JOPPD OBRASCU",
-   "azurirano": "2026-10-16T12:51:38"
+   "azurirano": "2026-11-18T18:00:02"
   },
   {
    "putanja": "Zaposlenost i plaće/Od 2025/T02.px",
    "naziv": "2. PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA NKD-u 2025. ZA RAZDOBLJA OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-10-16T12:53:43"
+   "azurirano": "2026-11-18T18:00:02"
   },
   {
    "putanja": "Zaposlenost i plaće/Od 2025/T03.px",
    "naziv": "3. PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA I BRUTO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA PODRUČJIMA NKD-a 2025. I PO TROMJESEČJIMA",
-   "azurirano": "2026-10-16T15:48:40"
+   "azurirano": "2026-11-18T18:00:02"
   },
   {
    "putanja": "Zaposlenost i plaće/Od 2025/T04.px",
    "naziv": "4. PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO SATU ZAPOSLENIH U PRAVNIM OSOBAMA PREMA NKD-u 2025. I PO MJESECIMA - OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-10-16T15:50:01"
+   "azurirano": "2026-11-18T18:00:02"
   },
   {
    "putanja": "Zaposlenost i plaće/Od 2025/T05.px",
    "naziv": "5. PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO SATU ZAPOSLENIH U PRAVNIM OSOBAMA PREMA NKD-u 2025. ZA RAZDOBLJA - OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-10-16T15:50:45"
+   "azurirano": "2026-11-18T18:00:02"
   },
   {
    "putanja": "Zaposlenost i plaće/Od 2025/T06.px",
    "naziv": "6. PROSJEČAN BROJ PLAĆENIH SATI RADA U PRAVNIM OSOBAMA PREMA NKD-u 2025. I PO MJESECIMA, OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-10-16T15:51:43"
+   "azurirano": "2026-11-18T18:00:02"
   },
   {
    "putanja": "Zaposlenost i plaće/Od 2025/T07.px",
    "naziv": "7. PROSJEČAN BROJ PLAĆENIH SATI RADA U PRAVNIM OSOBAMA PREMA NKD-u 2025. ZA RAZDOBLJA, OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-10-16T15:52:39"
+   "azurirano": "2026-11-20T12:23:56"
   },
   {
    "putanja": "Zaposlenost i plaće/Od 2025/T08.px",
    "naziv": "8. DISTRIBUCIJA NETO I BRUTO PLAĆA PO PERCENTILIMA I MJESECIMA, OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-10-16T16:00:18"
+   "azurirano": "2026-11-18T18:00:02"
   },
   {
    "putanja": "Zaposlenost i plaće/Od 2025/T09.px",
    "naziv": "9. PROSJEČNI MJESEČNI NEOPOREZIVI PRIMICI PO BROJU PRIMATELJA I BROJU ZAPOSLENIH KOJI SU PRIMILI PLAĆU U PRAVNIM OSOBAMA PREMA NKD-u 2025. PO MJESECIMA, OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-10-16T15:54:22"
+   "azurirano": "2026-11-18T18:00:02"
   },
   {
    "putanja": "Zaposlenost i plaće/Od 2025/T10.px",
    "naziv": "10. PROSJEČNA MJESEČNA BRUTO PLAĆA I ISPLAĆENA NETO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA NKD-u 2025. I SPOLU _ MJESECI I TROMJESEČJA, OBRADA PREMA OBRASCU JOPPD po DJELATNOST, GODINA, PERIOD, PLAĆA i SPOL",
-   "azurirano": "2026-08-20T15:05:04"
+   "azurirano": "2026-11-18T18:00:02"
   },
   {
    "putanja": "Zaposlenost i plaće/Od 2025/T11.px",
    "naziv": "11. PROSJEČNA MJESEČNA BRUTO PLAĆA I ISPLAĆENA NETO PLAĆA PO PLAĆENOM SATU U PRAVNIM OSOBAMA PREMA NKD-u 2025. I SPOLU _ MJESECI I TROMJESEČJA, OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-08-20T15:05:32"
+   "azurirano": "2026-11-18T18:00:02"
   },
   {
    "putanja": "Zaposlenost i plaće/Od 2025/T12.px",
    "naziv": "12. PROSJEČAN BROJ PLAĆENIH SATI RADA U PRAVNIM OSOBAMA PREMA NKD-u 2025. I SPOLU _ MJESECI I TROMJESEČJA, OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-08-19T13:05:48"
+   "azurirano": "2026-11-18T18:00:02"
   }
  ],
  "tablice_varijable": {
@@ -1090,14 +1090,14 @@
   {
    "putanja": "Zaposlenost i plaće/Od 2025/T01.px",
    "naziv": "1 PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA NKD-u 2025. _ OBRADA PREMA JOPPD OBRASCU",
-   "azurirano": "2026-10-16T12:51:38",
+   "azurirano": "2026-11-18T18:00:02",
    "naslov": "1 PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA NKD-u 2025. _ OBRADA PREMA JOPPD OBRASCU",
    "odabrano": {
     "DJELATNOST": "UKUPNO",
     "PLAĆA": "NETO"
    },
    "od": "2025-01",
-   "do": "2026-08"
+   "do": "2026-09"
   }
  ],
  "place_odbacene": [],
@@ -1220,5 +1220,5 @@
    "do": "2026-10"
   }
  ],
- "vrijeme": "2026-11-22T12:56:47+00:00"
+ "vrijeme": "2026-11-23T15:31:17+00:00"
 }

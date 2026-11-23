@@ -5,9 +5,9 @@
  "izvor": "DZS",
  "jedinica": "eur",
  "prikaz": "razina",
- "zadnje_razdoblje": "2026-08",
+ "zadnje_razdoblje": "2026-09",
  "zadnja_vrijednost": 1543.0,
- "promjena": 3.0,
+ "promjena": 0.0,
  "razine": [
   {
    "t": "2010-01",
@@ -808,6 +808,10 @@
   {
    "t": "2026-08",
    "v": 1543.0
+  },
+  {
+   "t": "2026-09",
+   "v": 1543.0
   }
  ],
  "god_stope": [
@@ -1562,6 +1566,10 @@
   {
    "t": "2026-08",
    "v": 6.71
+  },
+  {
+   "t": "2026-09",
+   "v": 5.98
   }
  ],
  "realne_god_stope": [
@@ -2124,6 +2132,10 @@
   {
    "t": "2026-08",
    "v": 2.9
+  },
+  {
+   "t": "2026-09",
+   "v": 1.61
   }
  ],
  "deflator": "HICP (Eurostat)",
