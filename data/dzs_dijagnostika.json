@@ -1064,9 +1064,41 @@
   }
  },
  "greske_pretrage": [
-  "Cijene: HTTP Error 429: "
+  "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2: HTTP Error 429: ",
+  "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 1 (arhiva): HTTP Error 429: "
  ],
- "ipc_katalog": [],
+ "ipc_katalog": [
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS14.px",
+   "naziv": "Tabela 1.4 Indeksi cijena stambenih objekata, po tromjesečjima",
+   "azurirano": "2026-09-30T09:04:42"
+  },
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS15.px",
+   "naziv": "Tabela 1.5 Indeksi cijena stambenih objekata, po godinama",
+   "azurirano": "2026-09-30T09:04:42"
+  },
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS16.px",
+   "naziv": "Tabela 1.6 Broj prodanih stambenih objekata, po tromjesečjima",
+   "azurirano": "2026-09-29T11:50:51"
+  },
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS17.px",
+   "naziv": "Tabela 1.7 Broj prodanih stambenih objekata, po godinama",
+   "azurirano": "2026-07-02T08:38:03"
+  },
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS18.px",
+   "naziv": "Tabela 1.8 Vrijednost prodanih stambenih objekata, po tromjesečjima",
+   "azurirano": "2026-09-29T11:50:51"
+  },
+  {
+   "putanja": "Cijene/Indeksi cijena stambenih objekata/ME_PS19.px",
+   "naziv": "Tabela 1.9 Vrijednost prodanih stambenih objekata, po godinama",
+   "azurirano": "2026-07-01T15:51:47"
+  }
+ ],
  "ipc_odbacene": [],
- "vrijeme": "2026-11-24T15:24:47+00:00"
+ "vrijeme": "2026-11-25T15:08:16+00:00"
 }
