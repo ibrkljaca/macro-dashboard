@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-25T15:08:16+00:00",
+ "azurirano": "2026-11-26T14:36:23+00:00",
  "uspjelo": 11,
  "zastarjelo": 0,
  "palo": 0,
@@ -92,7 +92,7 @@
    "izvor": "PxWeb: Zaposlenost i place + Statistika u nizu: place.xlsx",
    "stopa": "izracunato",
    "preskoceni_izvori": [
-    "deflator indeks potrošačkih cijena (DZS): IPC nije pronaden (0 kandidata odbaceno)"
+    "deflator indeks potrošačkih cijena (DZS): odstupa od HICP-a vise od 2 p.b. u prosjeku"
    ]
   }
  ]
