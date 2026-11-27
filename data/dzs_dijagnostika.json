@@ -894,233 +894,30 @@
    "text": "Znanost, tehnologija i informacijsko društvo"
   }
  ],
- "place_katalog": [
-  {
-   "putanja": "Zaposlenost i plaće/Od 2025/T01.px",
-   "naziv": "1 PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA NKD-u 2025. _ OBRADA PREMA JOPPD OBRASCU",
-   "azurirano": "2026-11-18T18:00:02"
-  },
-  {
-   "putanja": "Zaposlenost i plaće/Od 2025/T02.px",
-   "naziv": "2. PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA NKD-u 2025. ZA RAZDOBLJA OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-11-18T18:00:02"
-  },
-  {
-   "putanja": "Zaposlenost i plaće/Od 2025/T03.px",
-   "naziv": "3. PROSJEČNA MJESEČNA ISPLAĆENA NETO PLAĆA I BRUTO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA PODRUČJIMA NKD-a 2025. I PO TROMJESEČJIMA",
-   "azurirano": "2026-11-18T18:00:02"
-  },
-  {
-   "putanja": "Zaposlenost i plaće/Od 2025/T04.px",
-   "naziv": "4. PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO SATU ZAPOSLENIH U PRAVNIM OSOBAMA PREMA NKD-u 2025. I PO MJESECIMA - OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-11-18T18:00:02"
-  },
-  {
-   "putanja": "Zaposlenost i plaće/Od 2025/T05.px",
-   "naziv": "5. PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO SATU ZAPOSLENIH U PRAVNIM OSOBAMA PREMA NKD-u 2025. ZA RAZDOBLJA - OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-11-18T18:00:02"
-  },
-  {
-   "putanja": "Zaposlenost i plaće/Od 2025/T06.px",
-   "naziv": "6. PROSJEČAN BROJ PLAĆENIH SATI RADA U PRAVNIM OSOBAMA PREMA NKD-u 2025. I PO MJESECIMA, OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-11-18T18:00:02"
-  },
-  {
-   "putanja": "Zaposlenost i plaće/Od 2025/T07.px",
-   "naziv": "7. PROSJEČAN BROJ PLAĆENIH SATI RADA U PRAVNIM OSOBAMA PREMA NKD-u 2025. ZA RAZDOBLJA, OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-11-20T12:23:56"
-  },
-  {
-   "putanja": "Zaposlenost i plaće/Od 2025/T08.px",
-   "naziv": "8. DISTRIBUCIJA NETO I BRUTO PLAĆA PO PERCENTILIMA I MJESECIMA, OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-11-18T18:00:02"
-  },
-  {
-   "putanja": "Zaposlenost i plaće/Od 2025/T09.px",
-   "naziv": "9. PROSJEČNI MJESEČNI NEOPOREZIVI PRIMICI PO BROJU PRIMATELJA I BROJU ZAPOSLENIH KOJI SU PRIMILI PLAĆU U PRAVNIM OSOBAMA PREMA NKD-u 2025. PO MJESECIMA, OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-11-18T18:00:02"
-  },
-  {
-   "putanja": "Zaposlenost i plaće/Od 2025/T10.px",
-   "naziv": "10. PROSJEČNA MJESEČNA BRUTO PLAĆA I ISPLAĆENA NETO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA NKD-u 2025. I SPOLU _ MJESECI I TROMJESEČJA, OBRADA PREMA OBRASCU JOPPD po DJELATNOST, GODINA, PERIOD, PLAĆA i SPOL",
-   "azurirano": "2026-11-18T18:00:02"
-  },
-  {
-   "putanja": "Zaposlenost i plaće/Od 2025/T11.px",
-   "naziv": "11. PROSJEČNA MJESEČNA BRUTO PLAĆA I ISPLAĆENA NETO PLAĆA PO PLAĆENOM SATU U PRAVNIM OSOBAMA PREMA NKD-u 2025. I SPOLU _ MJESECI I TROMJESEČJA, OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-11-18T18:00:02"
-  },
-  {
-   "putanja": "Zaposlenost i plaće/Od 2025/T12.px",
-   "naziv": "12. PROSJEČAN BROJ PLAĆENIH SATI RADA U PRAVNIM OSOBAMA PREMA NKD-u 2025. I SPOLU _ MJESECI I TROMJESEČJA, OBRADA PREMA OBRASCU JOPPD",
-   "azurirano": "2026-11-18T18:00:02"
-  }
+ "greske_pretrage": [
+  "Zaposlenost i plaće: HTTP Error 400: Bad Request"
  ],
- "tablice_varijable": {
-  "Zaposlenost i plaće/Od 2025/T01.px": [
-   {
-    "code": "DJELATNOST",
-    "text": "DJELATNOST",
-    "time": null,
-    "broj": 103,
-    "vrijednosti": [
-     "UKUPNO",
-     "POLJOPRIVREDA, ŠUMARSTVO I RIBARSTVO",
-     "Biljna i stočarska proizvodnja, lovstvo i uslužne djelatnosti povezane s njima",
-     "Šumarstvo i sječa drva",
-     "Ribolov i akvakultura",
-     "RUDARSTVO I VAĐENJE",
-     "Vađenje sirove nafte i prirodnog plina",
-     "Ostalo rudarstvo i vađenje",
-     "Pomoćne uslužne djelatnosti u rudarstvu",
-     "PRERAĐIVAČKA INDUSTRIJA",
-     "Proizvodnja prehrambenih proizvoda",
-     "Proizvodnja pića",
-     "Proizvodnja duhanskih proizvoda",
-     "Proizvodnja tekstila",
-     "Proizvodnja odjeće"
-    ]
-   },
-   {
-    "code": "GODINA",
-    "text": "GODINA",
-    "time": null,
-    "broj": 2,
-    "vrijednosti": [
-     "2025.",
-     "2026."
-    ]
-   },
-   {
-    "code": "PERIOD",
-    "text": "PERIOD",
-    "time": null,
-    "broj": 19,
-    "vrijednosti": [
-     "I.-XII.",
-     "I.",
-     "II.",
-     "III.",
-     "IV.",
-     "V.",
-     "VI.",
-     "VII.",
-     "VIII.",
-     "IX.",
-     "X.",
-     "XI.",
-     "XII.",
-     "Q1",
-     "Q2"
-    ]
-   },
-   {
-    "code": "PLAĆA",
-    "text": "PLAĆA",
-    "time": null,
-    "broj": 2,
-    "vrijednosti": [
-     "BRUTO",
-     "NETO"
-    ]
-   }
-  ],
-  "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px": [
-   {
-    "code": "ECOICOP, ver. 2",
-    "text": "ECOICOP, ver. 2",
-    "time": null,
-    "broj": 522,
-    "vrijednosti": [
-     "00  INDEKS POTROŠAČKIH CIJENA – UKUPNO",
-     "01  HRANA I BEZALKOHOLNA PIĆA",
-     "01.1  HRANA",
-     "01.1.1  Žitarice i proizvodi od žitarica",
-     "01.1.1.1  Žitarice",
-     "01.1.1.2  Brašno od žitarica",
-     "01.1.1.3  Kruh i pekarski proizvodi",
-     "01.1.1.3.1  Kruh",
-     "01.1.1.3.9  Ostali pekarski proizvodi",
-     "01.1.1.4  Žitne pahuljice za doručak",
-     "01.1.1.5  Makaroni, rezanci, kuskus i slična tjestenina",
-     "01.1.1.9  Ostale mljevene žitarice i proizvodi od žitarica",
-     "01.1.2  Žive životinje, meso i ostali dijelovi zaklanih kopnenih životinja",
-     "01.1.2.1  Žive kopnene životinje",
-     "01.1.2.2  Meso, svježe, rashlađeno ili smrznuto"
-    ]
-   },
-   {
-    "code": "Indikatori",
-    "text": "Indikatori",
-    "time": null,
-    "broj": 4,
-    "vrijednosti": [
-     "godišnje stope promjene (tekući mjesec/isti mjesec prethodne godine), %",
-     "mjesečne stope promjene (tekući mjesec/prethodni mjesec), %",
-     "dvanaestomjesečne prosječne stope promjene, %",
-     "indeksi (2025. = 100)"
-    ]
-   },
-   {
-    "code": "Mjesec",
-    "text": "Mjesec",
-    "time": true,
-    "broj": 335,
-    "vrijednosti": [
-     "1998M12",
-     "1999M01",
-     "1999M02",
-     "1999M03",
-     "1999M04",
-     "1999M05",
-     "1999M06",
-     "1999M07",
-     "1999M08",
-     "1999M09",
-     "1999M10",
-     "1999M11",
-     "1999M12",
-     "2000M01",
-     "2000M02"
-    ]
-   }
-  ]
- },
- "place_upotrijebljene": [
-  {
-   "putanja": "Zaposlenost i plaće/Od 2025/T01.px",
-   "naziv": "1 PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA NKD-u 2025. _ OBRADA PREMA JOPPD OBRASCU",
-   "azurirano": "2026-11-18T18:00:02",
-   "naslov": "1 PROSJEČNA MJESEČNA BRUTO I NETO PLAĆA PO ZAPOSLENOME U PRAVNIM OSOBAMA PREMA NKD-u 2025. _ OBRADA PREMA JOPPD OBRASCU",
-   "odabrano": {
-    "DJELATNOST": "UKUPNO",
-    "PLAĆA": "NETO"
-   },
-   "od": "2025-01",
-   "do": "2026-09"
-  }
- ],
- "place_odbacene": [],
+ "place_katalog": [],
  "kontrola_prema_priopcenjima": {
   "2025-08": {
    "priopcenje": 1446,
-   "skripta": 1446.0
+   "skripta": 1470.0
   },
   "2025-12": {
    "priopcenje": 1494,
-   "skripta": 1494.0
+   "skripta": 1522.0
   },
   "2026-01": {
    "priopcenje": 1511,
-   "skripta": 1511.0
+   "skripta": null
   },
   "2026-04": {
    "priopcenje": 1552,
-   "skripta": 1552.0
+   "skripta": null
   },
   "2026-08": {
    "priopcenje": 1543,
-   "skripta": 1543.0
+   "skripta": null
   }
  },
  "ipc_katalog": [
@@ -1205,6 +1002,68 @@
    "azurirano": "2026-02-19T15:38:51"
   }
  ],
+ "tablice_varijable": {
+  "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px": [
+   {
+    "code": "ECOICOP, ver. 2",
+    "text": "ECOICOP, ver. 2",
+    "time": null,
+    "broj": 522,
+    "vrijednosti": [
+     "00  INDEKS POTROŠAČKIH CIJENA – UKUPNO",
+     "01  HRANA I BEZALKOHOLNA PIĆA",
+     "01.1  HRANA",
+     "01.1.1  Žitarice i proizvodi od žitarica",
+     "01.1.1.1  Žitarice",
+     "01.1.1.2  Brašno od žitarica",
+     "01.1.1.3  Kruh i pekarski proizvodi",
+     "01.1.1.3.1  Kruh",
+     "01.1.1.3.9  Ostali pekarski proizvodi",
+     "01.1.1.4  Žitne pahuljice za doručak",
+     "01.1.1.5  Makaroni, rezanci, kuskus i slična tjestenina",
+     "01.1.1.9  Ostale mljevene žitarice i proizvodi od žitarica",
+     "01.1.2  Žive životinje, meso i ostali dijelovi zaklanih kopnenih životinja",
+     "01.1.2.1  Žive kopnene životinje",
+     "01.1.2.2  Meso, svježe, rashlađeno ili smrznuto"
+    ]
+   },
+   {
+    "code": "Indikatori",
+    "text": "Indikatori",
+    "time": null,
+    "broj": 4,
+    "vrijednosti": [
+     "godišnje stope promjene (tekući mjesec/isti mjesec prethodne godine), %",
+     "mjesečne stope promjene (tekući mjesec/prethodni mjesec), %",
+     "dvanaestomjesečne prosječne stope promjene, %",
+     "indeksi (2025. = 100)"
+    ]
+   },
+   {
+    "code": "Mjesec",
+    "text": "Mjesec",
+    "time": true,
+    "broj": 335,
+    "vrijednosti": [
+     "1998M12",
+     "1999M01",
+     "1999M02",
+     "1999M03",
+     "1999M04",
+     "1999M05",
+     "1999M06",
+     "1999M07",
+     "1999M08",
+     "1999M09",
+     "1999M10",
+     "1999M11",
+     "1999M12",
+     "2000M01",
+     "2000M02"
+    ]
+   }
+  ]
+ },
  "ipc_upotrijebljene": [
   {
    "putanja": "Cijene/Indeksi potrošačkih cijena/Indeksi potrošačkih cijena – ECOICOP, ver. 2/ME_PS09.px",
@@ -1220,5 +1079,5 @@
    "do": "2026-10"
   }
  ],
- "vrijeme": "2026-11-26T14:36:23+00:00"
+ "vrijeme": "2026-11-27T14:30:14+00:00"
 }

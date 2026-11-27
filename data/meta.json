@@ -1,7 +1,7 @@
 {
- "azurirano": "2026-11-26T14:36:23+00:00",
- "uspjelo": 11,
- "zastarjelo": 0,
+ "azurirano": "2026-11-27T14:30:14+00:00",
+ "uspjelo": 10,
+ "zastarjelo": 1,
  "palo": 0,
  "pokazatelji": [
   {
@@ -71,8 +71,8 @@
   {
    "id": "esi",
    "status": "ok",
-   "zadnje_razdoblje": "2026-10",
-   "kasni_mjeseci": 1,
+   "zadnje_razdoblje": "2026-11",
+   "kasni_mjeseci": 0,
    "izvor": "ei_bssi_m_r2",
    "stopa": "izracunato"
   },
@@ -86,12 +86,13 @@
   },
   {
    "id": "neto_placa",
-   "status": "ok",
-   "zadnje_razdoblje": "2026-09",
-   "kasni_mjeseci": 2,
-   "izvor": "PxWeb: Zaposlenost i place + Statistika u nizu: place.xlsx",
+   "status": "zastarjelo",
+   "zadnje_razdoblje": "2025-12",
+   "kasni_mjeseci": 11,
+   "izvor": "Statistika u nizu: place.xlsx",
    "stopa": "izracunato",
    "preskoceni_izvori": [
+    "PxWeb: Zaposlenost i place: u bazi nije pronadena tablica s neto placom (0 tablica pregledano)",
     "deflator indeks potrošačkih cijena (DZS): odstupa od HICP-a vise od 2 p.b. u prosjeku"
    ]
   }
